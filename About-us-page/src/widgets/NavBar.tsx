@@ -8,16 +8,19 @@ function NavBar() {
       <div className={styles.logocontainer}>
         <img src={logo} alt="Best Charg Logo" className={styles.logoimage} />
       </div>
-      <ul>
-        <li className="products-menu">
+
+      <ul className={styles.navlinks}>
+        <li className={styles.productsMenu}>
           Products
           <IoChevronDown className={styles.icon} />
         </li>
+
         <li>Solutions</li>
-        <li>Best Hub</li>
+        <li className={styles.active}>Best Hub</li>
         <li>Blog</li>
         <li>About us</li>
       </ul>
+
       <button className={styles["Btn-get-started"]}>Get Started</button>
     </nav>
   );

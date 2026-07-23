@@ -5,7 +5,6 @@ const AboutPage = () => {
   return (
     <main>
       <HeroSection />
-      <NavBar />
     </main>
   );
 };
