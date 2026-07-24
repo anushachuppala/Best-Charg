@@ -1,5 +1,5 @@
 import HeroSection from "./HeroSection";
-import NavBar from "../../widgets/NavBar";
+// import NavBar from "../../widgets/NavBar";
 
 const AboutPage = () => {
   return (

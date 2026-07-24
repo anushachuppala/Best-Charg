@@ -29,7 +29,7 @@
 }
 
 .logoimage {
-  width: 300px;
+  width: 200px;
   height: auto;
   display: block;
 }
@@ -47,7 +47,7 @@
 
 .navbar li {
   position: relative;
-  font-size: 30px;
+  font-size: 22px;
   font-weight: 400;
   color: #555555;
   cursor: pointer;
@@ -80,7 +80,7 @@
   padding: 10px 22px;
   background-color: #4db56d;
   color: white;
-  font-size: 30px;
+  font-size: 22px;
   font-weight: 500;
   margin-left: 10px;
   cursor: pointer;

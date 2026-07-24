@@ -5,7 +5,6 @@ import NavBar from "./widgets/NavBar";
 function App() {
   return (
     <>
-      <NavBar />
       <AppRouter />
     </>
   );

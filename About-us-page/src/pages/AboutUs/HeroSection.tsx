@@ -15,9 +15,9 @@ function HeroSection() {
 
       <Container className={styles.heroContainer}>
         <div className={styles.heroContent}>
-          <p className={styles.smallHeading}>ABOUT BEST CHARG</p>
+          <p className="16-secondary">ABOUT BEST CHARG</p>
 
-          <h1 className={styles.heroTitle}>
+          <h1 className={`h1-white ${styles.heroTitle}`}>
             Engineering the Future
             <br />
             of <span>EV Charging</span>
@@ -25,7 +25,7 @@ function HeroSection() {
             Infrastructure
           </h1>
 
-          <p className={styles.heroDescription}>
+          <p className={`18-white ${styles.heroDescription}`}>
             Best Charg delivers intelligent EV charging infrastructure,
             enterprise-grade software, and integrated mobility ecosystems —
             helping businesses, governments, and communities transition

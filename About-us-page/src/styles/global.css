@@ -109,7 +109,9 @@ h3.h3-secondary,
 h4.h4-secondary {
   color: var(--color-secondary);
 }
-
+h1.h1-neutral-800 {
+  color: var(--color-neutral-800);
+}
 .large-text {
   font-size: var(--text-3xl);
   font-weight: var(--font-weight-extrabold);
@@ -196,8 +198,47 @@ h2[class~="14-primary"],
 p[class~="14-secondary"],
 span[class~="14-secondary"],
 a[class~="14-secondary"],
-h2[class~="14-secondary"] {
-  margin: 0;
+h2[class~="14-secondary"],
+p[class~="14-white"],
+span[class~="14-white"],
+a[class~="14-white"],
+h2[class~="14-white"],
+p[class~="14-neutral-800"],
+span[class~="14-neutral-800"],
+a[class~="14-neutral-800"],
+h2[class~="14-neutral-800"],
+p[class~="14-neutral-600"],
+span[class~="14-neutral-600"],
+a[class~="14-neutral-600"],
+h2[class~="14-neutral-600"],
+p[class~="14-neutral-500"],
+span[class~="14-neutral-500"],
+a[class~="14-neutral-500"],
+h2[class~="14-neutral-500"],
+p[class~="14-primary"],
+span[class~="14-primary"],
+a[class~="14-primary"],
+h2[class~="14-primary"],
+p[class~="24-white"],
+span[class~="24-white"],
+a[class~="24-white"],
+h2[class~="24-white"],
+p[class~="24-neutral-800"],
+span[class~="24-neutral-800"],
+a[class~="24-neutral-800"],
+h2[class~="24-neutral-800"],
+p[class~="24-neutral-600"],
+span[class~="24-neutral-600"],
+a[class~="24-neutral-600"],
+h2[class~="24-neutral-600"],
+p[class~="24-neutral-500"],
+span[class~="24-neutral-500"],
+a[class~="24-neutral-500"],
+h2[class~="24-neutral-500"],
+p[class~="24-primary"],
+span[class~="24-primary"],
+a[class~="24-primary"],
+h2[class~="24-primary"] {
   font-weight: var(--font-weight-regular);
 }
 
@@ -376,7 +417,22 @@ h2[class~="18-primary"] {
   color: var(--color-primary);
   line-height: var(--leading-snug);
 }
-
+p[class~="text-18-neutral-1300"],
+span[class~="text-18-neutral-1300"],
+a[class~="text-18-neutral-1300"],
+h2[class~="text-18-neutral-1300"] {
+  font-size: var(--text-md);
+  color: var(--color-neutral-1300);
+  line-height: var(--leading-snug);
+}
+p[class~="18-neutral-900"],
+span[class~="18-neutral-900"],
+a[class~="18-neutral-900"],
+h2[class~="18-neutral-900"] {
+  font-size: var(--text-md);
+  color: var(--color-neutral-900);
+  line-height: var(--leading-snug);
+}
 /* 16px */
 p[class~="16-white"],
 span[class~="16-white"],
@@ -386,7 +442,14 @@ h2[class~="16-white"] {
   color: var(--color-white);
   line-height: var(--leading-snug);
 }
-
+p[class~="16-neutral-900"],
+span[class~="16-neutral-900"],
+a[class~="16-neutral-900"],
+h2[class~="16-neutral-900"] {
+  font-size: 16px;
+  color: var(--color-neutral-900);
+  line-height: var(--leading-snug);
+}
 p[class~="16-neutral-800"],
 span[class~="16-neutral-800"],
 a[class~="16-neutral-800"],
@@ -467,7 +530,45 @@ h3[class~="14-neutral-900"] {
 
   font-weight: var(--font-weight-regular);
 }
+p[class~="14-neutral-1300"],
+span[class~="14-neutral-1300"],
+a[class~="14-neutral-1300"],
+h2[class~="14-neutral-1300"],
+h3[class~="14-neutral-1300"] {
+  font-size: 14px;
+  color: var(--color-neutral-1300);
 
+  font-weight: var(--font-weight-regular);
+}
+p[class~="14-neutral-600"],
+span[class~="14-neutral-600"],
+a[class~="14-neutral-600"],
+h2[class~="14-neutral-600"],
+h3[class~="14-neutral-600"] {
+  font-size: 14px;
+  color: var(--color-neutral-600);
+
+  font-weight: var(--font-weight-regular);
+}
+p[class~="14-neutral-1600"],
+span[class~="14-neutral-1600"],
+a[class~="14-neutral-1600"],
+h2[class~="14-neutral-1600"],
+h3[class~="14-neutral-1600"] {
+  font-size: 14px;
+  color: var(--color-neutral-1600);
+
+  font-weight: var(--font-weight-regular);
+}
+p[class~="14-white"],
+span[class~="14-white"],
+a[class~="14-white"],
+h2[class~="14-white"] {
+  font-size: 14px;
+  color: var(--color-white);
+  line-height: var(--leading-snug);
+  font-weight: var(--font-weight-regular);
+}
 p[class~="12-primary"],
 span[class~="12-primary"],
 a[class~="12-primary"],
@@ -515,9 +616,6 @@ h2[class~="12-neutral-900"] {
 }
 .grid-4 {
   grid-template-columns: repeat(4, 1fr);
-}
-.grid-5 {
-  grid-template-columns: repeat(5, 1fr);
 }
 .grid-auto-fill {
   grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
