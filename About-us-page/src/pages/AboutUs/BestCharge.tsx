@@ -13,10 +13,12 @@ const BestCharge = () => {
             className={styles.featureIcon}
           />
 
-          <div className={styles.featureContent}>
-            <h3 className="18-neutral-900">Engineering Excellence</h3>
+          <div className={styles.chargingOverlay}></div>
 
-            <p className="14-neutral-900">
+          <div className={styles.featureContent}>
+            <h3>Engineering Excellence</h3>
+
+            <p className="18-neutral-500">
               Built for Safety, reliability,
               <br />
               and long-term performance.

@@ -3,3 +3,66 @@
   padding: 0;
   box-sizing: border-box;
 }
+
+:root {
+  --blue-color: #163b7c;
+  --ash-color: #6c6c6c;
+}
+
+.bestChargeSection {
+  width: 100%;
+  padding: 0 0 60px;
+  background: #ffffff;
+  margin-top: -80px;
+  margin-bottom: -10px;
+}
+
+.bestChargeContainer {
+  max-width: 1407px;
+  margin: 0 auto;
+  padding: 0 70px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: -30px;
+}
+
+.featureItem {
+  display: flex;
+  align-items: flex-start;
+  gap: 18px;
+  flex: 1;
+}
+
+.featureIcon {
+  width: 60px;
+  height: 60px;
+  object-fit: contain;
+  flex-shrink: 0;
+}
+
+.Content {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.Content h3 {
+  color: var(--blue-color);
+  font-weight: 800;
+  line-height: 1.3;
+}
+
+.Content p {
+  color: var(--ash-color);
+  height: 33px;
+  line-height: 1.6;
+}
+
+.divider {
+  width: 2px;
+  height: 100px;
+  background: #d9d9d9;
+  margin: 0 32px;
+  flex-shrink: 0;
+}
