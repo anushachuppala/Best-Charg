@@ -30,11 +30,15 @@ const ChargingSolutions = () => {
             India accelerates toward electric mobility, we recognised that
             charging infrastructure would become the foundation of tomorrow's
             transportation ecosystem.
-            <br />
+          </p>
+
+          <p className="18-neutral-500">
             Best Charg was created to bring together infrastructure expertise,
             intelligent software, and reliable operations into one integrated
             platform.
-            <br />
+          </p>
+
+          <p className="18-neutral-500">
             Today, we design, deploy, and manage EV charging ecosystems that
             enable businesses, cities, fleets, and communities to embrace
             sustainable mobility with confidence.
