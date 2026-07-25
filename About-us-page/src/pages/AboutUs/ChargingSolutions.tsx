@@ -9,11 +9,11 @@ const ChargingSolutions = () => {
         <Panel>
           <div className={styles.chargingSolutionsContainer}>
             {/* Image */}
-            <div className="">
+            <div className={styles.imageWrapper}>
               <img
                 src={chargingImage}
                 alt="EV charging infrastructure"
-                className=""
+                className={styles.chargingImage}
               />
             </div>
 
