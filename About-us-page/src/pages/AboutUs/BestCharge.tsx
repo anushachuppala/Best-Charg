@@ -16,9 +16,9 @@ const BestCharge = () => {
           <div className={styles.chargingOverlay}></div>
 
           <div className={styles.featureContent}>
-            <h3>Engineering Excellence</h3>
+            <h3 className="heading">Engineering Excellence</h3>
 
-            <p className="18-neutral-500">
+            <p className="18-neutral-500 content">
               Built for Safety, reliability,
               <br />
               and long-term performance.
@@ -37,9 +37,9 @@ const BestCharge = () => {
           />
 
           <div className={styles.featureContent}>
-            <h3 className="18-neutral-900">Sustainable Future</h3>
+            <h3 className="heading">Sustainable Future</h3>
 
-            <p className="14-neutral-900">
+            <p className="18-neutral-500 content">
               Driving Clean mobility for
               <br />a better tomorrow.
             </p>
@@ -57,9 +57,9 @@ const BestCharge = () => {
           />
 
           <div className={styles.featureContent}>
-            <h3 className="18-neutral-900">Trusted Partnership</h3>
+            <h3 className="heading">Trusted Partnership</h3>
 
-            <p className="14-neutral-900">
+            <p className="18-neutral-500 content">
               Collaborating with governments,
               <br />
               Industries and Communities.
