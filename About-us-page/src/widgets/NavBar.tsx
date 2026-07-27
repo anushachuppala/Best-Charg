@@ -1,6 +1,7 @@
 import styles from "./NavBar.module.css";
 import logo from "../assets/images/logo.png";
 import { IoChevronDown } from "react-icons/io5";
+import Button from "../shared/ui/Button";
 
 function NavBar() {
   return (
@@ -21,7 +22,7 @@ function NavBar() {
         <li>About us</li>
       </ul>
 
-      <button className={styles["Btn-get-started"]}>Get Started</button>
+      <Button text="Get Started" variant="primary" />
     </nav>
   );
 }

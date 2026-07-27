@@ -1,6 +1,7 @@
 import heroImage from "../../assets/images/About-page/hero-section.png";
 import styles from "./HeroSection.module.css";
 import { Container } from "../../shared/layout/container";
+import Button from "../../shared/ui/Button";
 
 function HeroSection() {
   return (
@@ -32,11 +33,9 @@ function HeroSection() {
             confidently toward cleaner transportation.
           </p>
 
-          <div className={styles.heroButtons}>
-            <button className={styles.exploreBtn}>Explore Solutions</button>
+          <Button text="Explore Solutions" variant="primary"></Button>
 
-            <button className={styles.expertsBtn}>Talk to Our Experts</button>
-          </div>
+          <Button text="Talk to Our Experts" variant="secondary"></Button>
         </div>
       </Container>
     </section>

@@ -1,6 +1,7 @@
 import chargingImage from "../../assets/images/About-page/charging solutions.png";
 import { Container, Panel } from "../../shared/layout";
 import styles from "./ChargingSolutions.module.css";
+import Button from "../../shared/ui/Button";
 
 const ChargingSolutions = () => {
   return (
@@ -21,11 +22,11 @@ const ChargingSolutions = () => {
             <div className={styles.content}>
               <p className={`${styles.heading} 16-secondary`}>OUR STORY</p>
 
-              <h3 className="16-secondary">
+              <h2 className="h2-primary">
                 Built on Infrastructure. Focused on the Future.
-              </h3>
+              </h2>
 
-              <p className="18-neutral-500 ">
+              <p className={`18-neutral-500 ${styles.ptag}`}>
                 For decades, Best Infra has delivered complex infrastructure
                 projects with precision, safety, and engineering excellence. As
                 India accelerates toward electric mobility, we recognised that
@@ -33,21 +34,19 @@ const ChargingSolutions = () => {
                 tomorrow's transportation ecosystem.
               </p>
 
-              <p className="18-neutral-500 ">
+              <p className="18-neutral-500  `{p-tag}` ">
                 Best Charg was created to bring together infrastructure
                 expertise, intelligent software, and reliable operations into
                 one integrated platform.
               </p>
 
-              <p className="18-neutral-500  ">
+              <p className="18-neutral-500  `{p-tag}`  ">
                 Today, we design, deploy, and manage EV charging ecosystems that
                 enable businesses, cities, fleets, and communities to embrace
                 sustainable mobility with confidence.
               </p>
 
-              <button className={styles.exploreButton}>
-                Explore Solutions
-              </button>
+              <Button text="Explore Services" variant="primary"></Button>
             </div>
           </div>
         </Panel>
