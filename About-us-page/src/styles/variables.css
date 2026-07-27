@@ -146,8 +146,7 @@
 
   /* Font families — Manrope from /public/font/ + system fallback */
   --font-family-sans:
-    "Manrope", system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue",
-    Arial, sans-serif;
+    "Manrope", system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue";
 
   /* Scale — fluid type using clamp() */
   --text-xs: clamp(0.694rem, 0.66rem + 0.17vw, 0.75rem); /* 11–12px */

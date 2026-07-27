@@ -1,29 +1,48 @@
 import styles from "./NavBar.module.css";
 import logo from "../assets/images/logo.png";
-import { IoChevronDown } from "react-icons/io5";
+import { IoChevronDown, IoMenu, IoClose } from "react-icons/io5";
 import Button from "../shared/ui/Button";
+import { useState } from "react";
 
 function NavBar() {
+  const [menuOpen, setMenuOpen] = useState(false);
   return (
-    <nav className={styles.navbar}>
-      <div className={styles.logocontainer}>
-        <img src={logo} alt="Best Charg Logo" className={styles.logoimage} />
-      </div>
+    <header>
+      <nav className={styles.navbar}>
+        <div className={styles.logocontainer}>
+          <img src={logo} alt="Best Charg Logo" className={styles.logoimage} />
+        </div>
 
-      <ul className={styles.navlinks}>
-        <li className={styles.productsMenu}>
-          Products
-          <IoChevronDown className={styles.icon} />
-        </li>
+        <button
+          className={styles.menuButton}
+          onClick={() => setMenuOpen(!menuOpen)}
+        >
+          {menuOpen ? <IoClose /> : <IoMenu />}
+        </button>
 
-        <li>Solutions</li>
-        <li className={styles.active}>Best Hub</li>
-        <li>Blog</li>
-        <li>About us</li>
-      </ul>
+        <ul
+          className={`${styles.navlinks} ${menuOpen ? styles.navlinksOpen : ""}`}
+        >
+          <li className={styles.productsMenu}>
+            Products
+            <IoChevronDown className={styles.icon} />
+          </li>
 
-      <Button text="Get Started" variant="primary" />
-    </nav>
+          <li>Solutions</li>
+          <li className={styles.active}>Best Hub</li>
+          <li>Blog</li>
+          <li>About us</li>
+
+          <li className={styles.mobileButton}>
+            <Button text="Get Started" variant="primary" />
+          </li>
+        </ul>
+
+        <div className={styles.desktopButton}>
+          <Button text="Get Started" variant="primary" />
+        </div>
+      </nav>
+    </header>
   );
 }
 

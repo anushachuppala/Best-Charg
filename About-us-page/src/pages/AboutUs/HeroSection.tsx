@@ -6,17 +6,19 @@ import Button from "../../shared/ui/Button";
 function HeroSection() {
   return (
     <section className={styles.heroSection}>
-      <img
-        src={heroImage}
-        alt="EV Charging Infrastructure"
-        className={styles.heroImage}
-      />
+      <header>
+        <img
+          src={heroImage}
+          alt="EV Charging Infrastructure"
+          className={styles.heroImage}
+        />
+      </header>
 
       <div className={styles.heroOverlay}></div>
 
       <Container className={styles.heroContainer}>
         <div className={styles.heroContent}>
-          <p className="16-secondary">ABOUT BEST CHARG</p>
+          <p className={styles.smallHeading}>ABOUT BEST CHARG</p>
 
           <h1 className={`h1-white ${styles.heroTitle}`}>
             Engineering the Future
@@ -33,9 +35,8 @@ function HeroSection() {
             confidently toward cleaner transportation.
           </p>
 
-          <Button text="Explore Solutions" variant="primary"></Button>
-
-          <Button text="Talk to Our Experts" variant="secondary"></Button>
+          <Button text="Explore Solutions" variant="primary" />
+          <Button text="Talk to Our Experts" variant="secondary" />
         </div>
       </Container>
     </section>

@@ -19,7 +19,9 @@
   font-size: 22px;
   font-weight: 500;
   margin-left: 10px;
+  margin-right: 20px;
   cursor: pointer;
+  font-family: "Manrope", sans-serif;
 }
 
 .primary:hover {
@@ -39,4 +41,18 @@
   border: 1px solid #ffffff;
   background-color: transparent;
   color: #ffffff;
+  font-family: "Manrope", sans-serif;
+}
+
+.Tertiary {
+  border: none;
+  border-radius: 8px;
+  padding: 10px 22px;
+  background-color: #4db56d;
+  color: white;
+  font-size: 22px;
+  font-weight: 500;
+  margin-left: 10px;
+  cursor: pointer;
+  font-family: "Manrope", sans-serif;
 }
