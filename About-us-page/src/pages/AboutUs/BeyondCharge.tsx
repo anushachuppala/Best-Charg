@@ -1,42 +1,48 @@
 import styles from "./BeyondCharge.module.css";
 import BeyondImage from "../../assets/images/About-page/beyond charge (2).png";
-import { Container, Panel } from "../../shared/layout";
+import { Container, Panel, Section } from "../../shared/layout";
 import Button from "../../shared/ui/Button";
 
 const BeyondCharge = () => {
   return (
-    <section className={styles.beyondSection}>
+    <Section>
       <Container>
         <Panel>
-          <div className={styles.content}>
-            <p className={styles.eyebrow}>BEYOND CHARGING</p>
+          <div className="page-row">
+            <div className="page-col-12 page-col-lg-6">
+              <p className={` 16-secondary ${styles.eyebrow}`}>
+                BEYOND CHARGING
+              </p>
 
-            <h2>
-              Beyond Charging
-              <br />
-              Building Destinations.
-            </h2>
+              <h2 className={styles.heading}>
+                Beyond Charging
+                <br />
+                Building Destinations.
+              </h2>
 
-            <p className={styles.description}>
-              Best Hub transforms EV charging stations into vibrant destinations
-              by combining fast charging with retail, dining, smart parking,
-              digital services, and community spaces creating value for
-              businesses and convenience for EV users.
-            </p>
+              <p className={` 18-neutral ${styles.description}`}>
+                Best Hub transforms EV charging stations into vibrant
+                destinations by combining fast charging with retail, dining,
+                smart parking, digital services, and community spaces creating
+                value for businesses and convenience for EV users.
+              </p>
 
-            <Button text="Explore Best Hub" variant="primary" />
-          </div>
+              <Button text="Explore Best Hub" variant="primary" />
+            </div>
 
-          <div className={styles.imageWrapper}>
-            <img
-              src={BeyondImage}
-              alt="Best Charge EV charging station"
-              className={styles.beyondImage}
-            />
+            <div className="page-row">
+              <div className="page-col-12 page-col-lg-6">
+                <img
+                  src={BeyondImage}
+                  alt="Best Charge EV charging station"
+                  className={styles.beyondImage}
+                />
+              </div>
+            </div>
           </div>
         </Panel>
       </Container>
-    </section>
+    </Section>
   );
 };
 

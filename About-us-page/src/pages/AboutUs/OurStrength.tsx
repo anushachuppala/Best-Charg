@@ -1,15 +1,15 @@
 import styles from "./OurStrength.module.css";
 import strengthImage from "../../assets/images/About-page/OurStrength.png";
-import { Container, Panel } from "../../shared/layout";
+import { Container, Panel, Section } from "../../shared/layout";
 import iterationIcon from "../../assets/images/About-page/Iteration.png";
 import technologyIcon from "../../assets/images/About-page/nanotechnology.png";
 import arrowIcon from "../../assets/images/About-page/arrow.png";
 
 const OurStrength = () => {
   return (
-    <Container>
-      <Panel>
-        <section className={styles.strengthSection}>
+    <Section className={styles.strengthSection}>
+      <Container>
+        <Panel>
           <div className={styles.strengthContainer}>
             {/* Section Heading */}
             <div className={styles.headingWrapper}>
@@ -26,6 +26,7 @@ const OurStrength = () => {
               <button className={`${styles.arrow} ${styles.leftArrow}`}>
                 ‹
               </button>
+
               {/* Image */}
               <div className={styles.imageWrapper}>
                 <img
@@ -34,11 +35,12 @@ const OurStrength = () => {
                   className={styles.strengthImage}
                 />
               </div>
+
               {/* Content */}
               <div className={styles.contentWrapper}>
                 <div className={styles.iconCircle}></div>
 
-                <h3>End-to-End EV Infrastructure</h3>
+                <h3 className="16-primary">End-to-End EV Infrastructure</h3>
 
                 <p className={styles.description}>
                   From charger manufacturing and installation to software,
@@ -50,34 +52,29 @@ const OurStrength = () => {
                 <div className={styles.features}>
                   <div className={styles.featureItem}>
                     <span className={styles.featureIcon}>
-                      <img src={iterationIcon} />
+                      <img src={iterationIcon} alt="Execution" />
                     </span>
-
                     <span>End-to-End Execution</span>
                   </div>
 
                   <div className={styles.featureItem}>
                     <span className={styles.featureIcon}>
-                      <img src={technologyIcon} />
+                      <img src={technologyIcon} alt="Technology" />
                     </span>
-
                     <span>Integrated Technology</span>
                   </div>
 
                   <div className={styles.featureItem}>
                     <span className={styles.featureIcon}>
-                      <img src={arrowIcon} />
+                      <img src={arrowIcon} alt="Scale" />
                     </span>
-
                     <span>Built to Scale</span>
                   </div>
                 </div>
               </div>
-              {/* End of contentWrapper */}
             </div>
-            {/* End of strengthCard */}
 
-            {/* Right Arrow */}
+            {/* Navigation */}
             <button className={`${styles.arrow} ${styles.rightArrow}`}>
               ›
             </button>
@@ -85,15 +82,14 @@ const OurStrength = () => {
             {/* Slider Dots */}
             <div className={styles.dots}>
               <span className={`${styles.dot} ${styles.activeDot}`}></span>
-
               <span className={styles.dot}></span>
               <span className={styles.dot}></span>
               <span className={styles.dot}></span>
             </div>
           </div>
-        </section>
-      </Panel>
-    </Container>
+        </Panel>
+      </Container>
+    </Section>
   );
 };
 

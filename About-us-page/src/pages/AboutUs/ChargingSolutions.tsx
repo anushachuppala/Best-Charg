@@ -20,7 +20,7 @@ const ChargingSolutions = () => {
 
             {/* Content */}
             <div className={styles.content}>
-              <p className={`${styles.heading} 16-secondary`}>OUR STORY</p>
+              <p className={` 16-secondary ${styles.heading} `}>OUR STORY</p>
 
               <h2 className="h2-primary">
                 Built on Infrastructure. Focused on the Future.

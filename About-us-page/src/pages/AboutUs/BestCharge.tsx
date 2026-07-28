@@ -1,12 +1,12 @@
 import serviceIcon from "../../assets/images/About-page/service 1.png";
 import styles from "./BestCharge.module.css";
-import { Container } from "../../shared/layout/container";
+import { Container, Panel } from "../../shared/layout";
 
 const BestCharge = () => {
   return (
-    <Container>
-      <section>
-        <section className={styles.bestChargeSection}>
+    <section className={styles.bestChargeSection}>
+      <Container>
+        <Panel>
           <div className={styles.bestChargeContainer}>
             {/* Engineering Excellence */}
             <div className={styles.featureItem}>
@@ -41,6 +41,7 @@ const BestCharge = () => {
 
               <div className={styles.featureContent}>
                 <h3 className="heading">Sustainable Future</h3>
+
                 <p className={`18-neutral-500 ${styles.content}`}>
                   Driving Clean mobility for
                   <br />a better tomorrow.
@@ -69,9 +70,9 @@ const BestCharge = () => {
               </div>
             </div>
           </div>
-        </section>
-      </section>
-    </Container>
+        </Panel>
+      </Container>
+    </section>
   );
 };
 
