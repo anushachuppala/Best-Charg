@@ -1,6 +1,9 @@
 import HeroSection from "./HeroSection";
 import BestCharge from "./BestCharge";
 import ChargingSolutions from "./ChargingSolutions";
+import OurStrength from "./OurStrength";
+import BeyondCharge from "./BeyondCharge";
+
 // import NavBar from "../../widgets/NavBar";
 
 const AboutPage = () => {
@@ -9,6 +12,8 @@ const AboutPage = () => {
       <HeroSection />
       <BestCharge />
       <ChargingSolutions />
+      <OurStrength />
+      <BeyondCharge />
     </main>
   );
 };

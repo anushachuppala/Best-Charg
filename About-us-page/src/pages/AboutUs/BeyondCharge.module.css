@@ -1,0 +1,55 @@
+.eyebrow {
+  margin: 50px 0px 14px 0px;
+  color: #57b368;
+  font-size: 16px;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.content h2 {
+  margin: 0;
+  font-size: 36px;
+  width: 525px;
+  height: 86px;
+  line-height: 1.15;
+  font-weight: 700;
+  color: #183b7a;
+  letter-spacing: 0.02em;
+  font-family: "Manrope", sans-serif;
+}
+
+.description {
+  margin-top: 20px;
+  margin-bottom: 40px;
+  font-size: 18px;
+  line-height: 1.8;
+  color: #667085;
+  max-width: 430px;
+}
+
+.content,
+.imageWrapper {
+  display: grid;
+  grid-template-rows: 2;
+  align-items: center;
+}
+
+.content {
+  justify-self: flex-start;
+  transform: translateX(100px);
+}
+
+.imageWrapper {
+  justify-self: flex-end;
+  transform: translateX(-150px);
+}
+
+.beyondImage {
+  width: 525px;
+  height: 324px;
+  margin-top: -320px;
+  margin-right: -50px;
+  border-radius: 14px;
+  object-fit: cover;
+}
