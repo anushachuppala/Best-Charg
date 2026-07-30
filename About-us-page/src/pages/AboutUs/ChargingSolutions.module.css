@@ -6,9 +6,9 @@
 
 .chargingSolutionsContainer {
   display: flex;
-  align-items: center;
-  gap: 50px;
-  width: 100%;
+  flex-direction: row;
+  gap: var(--space-15);
+  /* width: 100%; */
 }
 
 /* Image */
@@ -28,7 +28,16 @@
   display: block;
   object-fit: cover;
 }
+.heading {
+  margin-top: 20px;
+  font-weight: 700;
+}
 
+.title {
+  margin-top: 20px;
+  margin-bottom: 15px;
+  font-weight: 700;
+}
 /* CONTENT */
 
 .content {
@@ -37,4 +46,5 @@
   display: flex;
   flex-direction: column;
   align-items: flex-start;
+  /* gap: var(--space-6); */
 }

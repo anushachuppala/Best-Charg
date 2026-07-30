@@ -51,7 +51,7 @@
 /* Active link */
 
 .navbar li:nth-child(3) {
-  color: #45b96b;
+  color: #55b56c;
   font-weight: 600;
 }
 
@@ -64,7 +64,7 @@
   right: 0;
   bottom: -3px;
   height: 3px;
-  background-color: #45b96b;
+  background-color: #55b56c;
 }
 
 /* Hide hamburger on desktop */
