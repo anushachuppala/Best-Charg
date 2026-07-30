@@ -4,40 +4,40 @@
   box-sizing: border-box;
 }
 
-.heading {
-  margin: 0;
+.pagerow {
+  display: flex;
+  flex-direction: row;
+}
+
+.content {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-3);
+  justify-self: flex-end;
 }
 
 .eyebrow {
+  color: #55b56c;
   font-weight: 700;
+}
+
+.heading {
+  color: #163b7c;
+  font-weight: 700;
+  margin: 0;
 }
 
 .description {
   line-height: 1.8;
-  color: #667085;
+  color: #6c6c6c;
   max-width: 430px;
 }
 
-.content,
-.imageWrapper {
-  display: grid;
-  grid-template-rows: 2;
-  align-items: center;
-}
-
-.content {
-  justify-self: flex-start;
-  transform: translateX(100px);
-}
-
-.imageWrapper {
-  justify-self: flex-end;
-  transform: translateX(-120px);
-}
-
 .beyondImage {
-  width: 525px;
+  width: 100%;
   height: 324px;
-  border-radius: 14px;
+  display: block;
   object-fit: cover;
+  border-radius: 14px;
+  transform: translateX(100px);
 }

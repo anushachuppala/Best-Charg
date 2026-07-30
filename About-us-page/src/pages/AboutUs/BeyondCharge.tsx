@@ -8,8 +8,8 @@ const BeyondCharge = () => {
     <Section>
       <Container>
         <Panel>
-          <div className="page-row">
-            <div className="page-col-12 page-col-lg-6">
+          <div className={styles.pagerow}>
+            <div className={`page-col-12 page-col-lg-6 ${styles.content}`}>
               <p className={` 16-secondary ${styles.eyebrow}`}>
                 BEYOND CHARGING
               </p>
@@ -30,14 +30,12 @@ const BeyondCharge = () => {
               <Button text="Explore Best Hub" variant="primary" />
             </div>
 
-            <div className="page-row">
-              <div className="page-col-12 page-col-lg-6">
-                <img
-                  src={BeyondImage}
-                  alt="Best Charge EV charging station"
-                  className={styles.beyondImage}
-                />
-              </div>
+            <div className="page-col-12 page-col-lg-6">
+              <img
+                src={BeyondImage}
+                alt="Best Charge EV charging station"
+                className={styles.beyondImage}
+              />
             </div>
           </div>
         </Panel>
