@@ -11,11 +11,10 @@ body {
 /* main section */
 
 .strengthSection {
-  width: 100vw;
+  width: 100%;
   min-height: 530px;
   background-color: var(--color-primary);
   position: relative;
-  margin-left: calc(50% - 50vw);
   display: flex;
   flex-direction: column;
   gap: var(--space-5);
@@ -28,7 +27,6 @@ body {
   flex-direction: column;
   gap: var(--space-5);
   margin: 0 auto;
-  padding: 0 76px 20px;
   position: relative;
 }
 
@@ -40,15 +38,15 @@ body {
 
 .smallHeading {
   color: var(--color-secondary);
-  font-size: 12px;
-  font-weight: 700;
+  font-size: 20px;
+  font-weight: 500;
   letter-spacing: 0.3px;
 }
 
 .heading {
   color: #ffffff;
-  font-size: 23px;
-  font-weight: 700;
+  font-size: 25px;
+  font-weight: 600;
   line-height: 1.2;
 }
 
@@ -60,14 +58,15 @@ body {
   background-color: var(--color-white);
   border-radius: 10px;
   overflow: hidden;
-  display: flex;
-  flex-direction: row;
-  gap: var(--space-5);
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  gap: 0;
 }
-/* image */
 
+/* Image */
 .imageWrapper {
-  width: 55%;
+  width: 100%;
+  height: 100%;
   padding: 4px;
   display: flex;
 }
@@ -79,34 +78,37 @@ body {
   border-radius: 8px;
   display: block;
 }
-
 /* content */
-
 .contentWrapper {
+  width: 100%;
   position: relative;
   display: flex;
   flex-direction: column;
-  gap: var(--space-7);
+  justify-content: center;
+  align-items: flex-start;
+  padding: 30px 20px;
+  gap: var(--space-1);
 }
 
 .iconCircle {
   position: absolute;
   width: 50px;
   height: 50px;
-  margin-top: 10px;
-  margin-left: -3px;
   border-radius: 50%;
   background-color: var(--color-secondary);
+  top: 67px;
+  left: 27px;
   z-index: 1;
 }
 
 .text {
   color: #163b7c;
-  font-size: 24px;
+  font-size: 20px;
   font-weight: 800px;
-  margin-top: 25px;
-  margin-left: 4px;
-  display: block;
+  padding: 2px 15px 10px 10px;
+  position: relative;
+  z-index: 2;
+  display: grid;
   align-items: center;
   justify-self: center;
 }
@@ -126,10 +128,11 @@ body {
 
 .description {
   max-width: 280px;
-  color: #6f6f6f;
+  color: #6c6c6c;
   font-size: 15px;
   font-weight: 300;
   line-height: 1.4;
+  gap: var(--space-5);
 }
 
 /* features */
@@ -143,10 +146,10 @@ body {
 .featureItem {
   display: flex;
   align-items: center;
-  gap: 15px;
+  gap: var(--space-5);
   color: var(--color-primary);
-  font-size: 13px;
-  font-weight: 600;
+  font-size: 18px;
+  font-weight: 700;
 }
 
 .featureIcon {

@@ -23,9 +23,9 @@ const OurStrength = () => {
             {/* Main Card */}
             <div className={styles.strengthCard}>
               {/* Left Arrow */}
-              <button className={`${styles.arrow} ${styles.leftArrow}`}>
+              {/* <button className={`${styles.arrow} ${styles.leftArrow}`}>
                 ‹
-              </button>
+              </button> */}
 
               {/* Image */}
               <div className={styles.imageWrapper}>
@@ -77,9 +77,9 @@ const OurStrength = () => {
             </div>
 
             {/* Navigation */}
-            <button className={`${styles.arrow} ${styles.rightArrow}`}>
+            {/* <button className={`${styles.arrow} ${styles.rightArrow}`}>
               ›
-            </button>
+            </button> */}
 
             {/* Slider Dots */}
             <div className={styles.dots}>
