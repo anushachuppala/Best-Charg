@@ -4,27 +4,20 @@
   box-sizing: border-box;
 }
 
-.pagerow {
-  display: flex;
-  flex-direction: row;
-}
-
-.content {
-  display: flex;
-  flex-direction: column;
-  gap: var(--space-3);
-  justify-self: flex-end;
-}
-
-.eyebrow {
-  color: #55b56c;
-  font-weight: 700;
+.page-row {
+  display: grid;
+  grid-template-rows: repeat(2, auto);
+  align-items: center;
 }
 
 .heading {
+  margin: 0;
   color: #163b7c;
   font-weight: 700;
-  margin: 0;
+}
+
+.eyebrow {
+  font-weight: 700;
 }
 
 .description {
@@ -33,11 +26,18 @@
   max-width: 430px;
 }
 
+.content {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-4);
+  justify-self: flex-start;
+  transform: translateX(180px);
+}
+
 .beyondImage {
-  width: 100%;
+  width: 525px;
   height: 324px;
-  display: block;
-  object-fit: cover;
   border-radius: 14px;
-  transform: translateX(100px);
+  object-fit: cover;
+  transform: translateX(60px);
 }

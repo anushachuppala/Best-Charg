@@ -8,7 +8,7 @@ const ChargingSolutions = () => {
     <section>
       <Container>
         <Panel>
-          <div className="page-col-14 page-col-lg-7">
+          <div className="page-col-12 page-col-lg-6">
             <div className={styles.chargingSolutionsContainer}>
               {/* Image */}
               <div className={styles.imageWrapper}>
