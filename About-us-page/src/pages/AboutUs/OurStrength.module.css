@@ -27,7 +27,6 @@ body {
   display: flex;
   flex-direction: column;
   gap: var(--space-5);
-  width: min(1020px, 90%);
   margin: 0 auto;
   padding: 0 76px 20px;
   position: relative;
@@ -92,13 +91,24 @@ body {
 
 .iconCircle {
   position: absolute;
-  width: 40px;
-  height: 40px;
-  margin-top: 5px;
+  width: 50px;
+  height: 50px;
+  margin-top: 10px;
   margin-left: -3px;
   border-radius: 50%;
   background-color: var(--color-secondary);
   z-index: 1;
+}
+
+.text {
+  color: #163b7c;
+  font-size: 24px;
+  font-weight: 800px;
+  margin-top: 25px;
+  margin-left: 4px;
+  display: block;
+  align-items: center;
+  justify-self: center;
 }
 
 .contentWrapper h3 {

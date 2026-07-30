@@ -40,7 +40,9 @@ const OurStrength = () => {
               <div className={styles.contentWrapper}>
                 <div className={styles.iconCircle}></div>
 
-                <h3 className="16-primary">End-to-End EV Infrastructure</h3>
+                <h3 className={`16-primary ${styles.text}`}>
+                  End-to-End EV Infrastructure
+                </h3>
 
                 <p className={styles.description}>
                   From charger manufacturing and installation to software,
