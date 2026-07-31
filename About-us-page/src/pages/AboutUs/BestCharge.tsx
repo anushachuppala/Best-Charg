@@ -28,7 +28,7 @@ const BestCharge = () => {
                 </p>
               </div>
 
-              <div className={styles.divider}></div>
+              {/* <div className={styles.divider}></div> */}
             </div>
 
             {/* Sustainable Future */}
@@ -47,7 +47,7 @@ const BestCharge = () => {
                   <br />a better tomorrow.
                 </p>
               </div>
-              <div className={styles.divider}></div>
+              {/* <div className={styles.divider}></div> */}
             </div>
 
             {/* Trusted Partnership */}
