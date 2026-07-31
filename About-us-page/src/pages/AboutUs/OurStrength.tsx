@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, useEffect, useCallback } from "react";
 
 import styles from "./OurStrength.module.css";
 import strengthImage from "../../assets/images/About-page/OurStrength.png";
@@ -6,13 +6,6 @@ import { Container, Panel, Section } from "../../shared/layout";
 import iterationIcon from "../../assets/images/About-page/Iteration.png";
 import technologyIcon from "../../assets/images/About-page/nanotechnology.png";
 import arrowIcon from "../../assets/images/About-page/arrow.png";
-
-import { Swiper, SwiperSlide } from "swiper/react";
-import { Navigation, Autoplay } from "swiper/modules";
-
-import "swiper/css";
-import "swiper/css/navigation";
-// import "swiper/css/pagination";
 
 const slides = [
   {
@@ -35,30 +28,6 @@ const slides = [
         icon: arrowIcon,
         text: "Built to Scale",
         alt: "Scale",
-      },
-    ],
-  },
-
-  {
-    image: strengthImage,
-    title: "Smart EV Charging Solutions",
-    description:
-      "We provide intelligent and reliable EV charging solutions designed to support modern electric mobility infrastructure.",
-    features: [
-      {
-        icon: iterationIcon,
-        text: "Smart Charging",
-        alt: "Smart charging",
-      },
-      {
-        icon: technologyIcon,
-        text: "Advanced Technology",
-        alt: "Technology",
-      },
-      {
-        icon: arrowIcon,
-        text: "Future Ready",
-        alt: "Future ready",
       },
     ],
   },
@@ -112,14 +81,54 @@ const slides = [
   },
 ];
 
+const loopSlides = [slides[slides.length - 1], ...slides, slides[0]];
+
 const OurStrength = () => {
-  const [activeIndex, setActiveIndex] = useState(0);
+  const [activeIndex, setActiveIndex] = useState(1);
+
+  console.log("active state:", activeIndex);
+
+  // Next Slide
+  const nextSlide = useCallback(() => {
+    setActiveIndex((prev) => prev + 1);
+  }, []);
+
+  // Previous Slide
+  const previousSlide = useCallback(() => {
+    setActiveIndex((prev) => prev - 1);
+  }, []);
+
+  // Reset cloned slides
+  useEffect(() => {
+    if (activeIndex === loopSlides.length - 1) {
+      setTimeout(() => {
+        setActiveIndex(1);
+      }, 600);
+    }
+
+    if (activeIndex === 0) {
+      setTimeout(() => {
+        setActiveIndex(slides.length);
+      }, 600);
+    }
+  }, [activeIndex]);
+
+  // Autoplay
+  useEffect(() => {
+    const timer = setInterval(() => {
+      nextSlide();
+    }, 6000);
+
+    return () => clearInterval(timer);
+  }, [nextSlide]);
+
   return (
     <Section className={styles.strengthSection}>
       <Container>
         <Panel>
           <div className={styles.strengthContainer}>
-            {/* Section Heading */}
+            {/* Heading */}
+
             <div className={styles.headingWrapper}>
               <p className={styles.smallHeading}>OUR STRENGTH</p>
 
@@ -128,93 +137,89 @@ const OurStrength = () => {
               </h2>
             </div>
 
-            {/* Swiper */}
+            {/* Slider */}
+
             <div className={styles.sliderWrapper}>
-              <Swiper
-                modules={[Navigation, Autoplay]}
-                navigation={{
-                  prevEl: `.${styles.leftArrow}`,
-                  nextEl: `.${styles.rightArrow}`,
+              <div
+                className={styles.sliderTrack}
+                style={{
+                  transform: `translateX(-${activeIndex * 100}%)`,
                 }}
-                autoplay={{
-                  delay: 4000,
-                  disableOnInteraction: false,
-                }}
-                loop={true}
-                onSlideChange={(swiper) => setActiveIndex(swiper.realIndex)}
-                className={styles.swiper}
               >
-                {slides.map((slide, index) => (
-                  <SwiperSlide key={index}>
-                    <div className={styles.strengthCard}>
-                      {/* Image */}
-                      <div className={styles.imageWrapper}>
-                        <img
-                          src={slide.image}
-                          alt={slide.title}
-                          className={styles.strengthImage}
-                        />
-                      </div>
+                {loopSlides.map((slide, index) => (
+                  <div className={styles.strengthCard} key={index}>
+                    {/* Image */}
 
-                      {/* Content */}
-                      <div className={styles.contentWrapper}>
-                        <div className={styles.iconCircle}></div>
+                    <div className={styles.imageWrapper}>
+                      <img
+                        src={slide.image}
+                        alt={slide.title}
+                        className={styles.strengthImage}
+                      />
+                    </div>
 
-                        <h3 className={styles.text}>{slide.title}</h3>
+                    {/* Content */}
 
-                        <p className={styles.description}>
-                          {slide.description}
-                        </p>
+                    <div className={styles.contentWrapper}>
+                      <div className={styles.iconCircle}></div>
 
-                        {/* Features */}
-                        <div className={styles.features}>
-                          {slide.features.map((feature, featureIndex) => (
-                            <div
-                              className={styles.featureItem}
-                              key={featureIndex}
-                            >
-                              <span className={styles.featureIcon}>
-                                <img src={feature.icon} alt={feature.alt} />
-                              </span>
+                      <h3 className={styles.text}>{slide.title}</h3>
 
-                              <span>{feature.text}</span>
-                            </div>
-                          ))}
-                        </div>
+                      <p className={styles.description}>{slide.description}</p>
+
+                      <div className={styles.features}>
+                        {slide.features.map((feature, featureIndex) => (
+                          <div
+                            className={styles.featureItem}
+                            key={featureIndex}
+                          >
+                            <span className={styles.featureIcon}>
+                              <img src={feature.icon} alt={feature.alt} />
+                            </span>
+
+                            <span>{feature.text}</span>
+                          </div>
+                        ))}
                       </div>
                     </div>
-                  </SwiperSlide>
-                ))}
-              </Swiper>
-
-              {/* Left Arrow */}
-              <button
-                className={`${styles.arrow} ${styles.leftArrow}`}
-                aria-label="Previous slide"
-              >
-                ‹
-              </button>
-
-              {/* Right Arrow */}
-              <button
-                className={`${styles.arrow} ${styles.rightArrow}`}
-                aria-label="Next slide"
-              >
-                ›
-              </button>
-
-              {/* Pagination */}
-
-              <div className={styles.dots}>
-                {slides.map((_, index) => (
-                  <span
-                    key={index}
-                    className={`${styles.dot} ${
-                      activeIndex === index ? styles.activeDot : ""
-                    }`}
-                  />
+                  </div>
                 ))}
               </div>
+            </div>
+
+            {/* Left Arrow */}
+
+            <button
+              className={`${styles.arrow} ${styles.leftArrow}`}
+              onClick={previousSlide}
+              aria-label="Previous slide"
+            >
+              ‹
+            </button>
+
+            {/* Right Arrow */}
+
+            <button
+              className={`${styles.arrow} ${styles.rightArrow}`}
+              onClick={nextSlide}
+              aria-label="Next slide"
+            >
+              ›
+            </button>
+
+            {/* Dots */}
+
+            <div className={styles.dots}>
+              {slides.map((_, index) => (
+                <span
+                  key={index}
+                  onClick={() => setActiveIndex(index + 1)}
+                  className={`
+                    ${styles.dot}
+                    ${activeIndex - 1 === index ? styles.activeDot : ""}
+                  `}
+                />
+              ))}
             </div>
           </div>
         </Panel>

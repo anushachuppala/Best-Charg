@@ -8,18 +8,14 @@
   width: 100%;
   padding: 0 0 60px;
   background: #ffffff;
-  margin-top: -80px;
-  margin-bottom: -10px;
 }
 
 .bestChargeContainer {
-  max-width: 1407px;
-  margin: 0 auto;
-  padding: 0 70px;
-  display: flex;
-  justify-content: space-between;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 40px;
   align-items: center;
-  margin-bottom: -30px;
+  justify-content: center;
 }
 
 .featureItem {
@@ -43,19 +39,6 @@
   flex-direction: column;
   justify-content: center;
   height: auto;
-  margin-top: 30px;
-}
-
-.featureContent h3 {
-  margin: 0;
-  margin-bottom: 10px;
-}
-
-.featureContent p {
-  margin: 8px 0 0;
-}
-.heading {
-  margin-top: -15px;
 }
 
 .Content {
@@ -63,13 +46,10 @@
   align-items: center;
   justify-content: center;
   line-height: 1.6;
-  transform: translateY(50px);
 }
 
 .divider {
-  width: 2px;
+  width: 1px;
   height: 100px;
-  background: #d9d9d9;
-  margin: 0 32px;
-  flex-shrink: 0;
+  border: 2px solid #b3b3b34d;
 }

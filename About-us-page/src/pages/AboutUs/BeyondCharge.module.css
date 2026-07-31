@@ -1,42 +1,49 @@
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
+.bestChargeContainer {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  width: 100%;
 }
 
-.page-row {
-  /* display: grid;
-  grid-template-rows: repeat(2, auto);
+.featureItem {
+  position: relative;
+  display: grid;
+  grid-template-columns: auto 1fr;
   align-items: center;
-  gap: var(--space-12); */
+  column-gap: 20px;
+  padding: 0 35px;
+}
+
+.featureItem:not(:last-child)::after {
+  content: "";
+  position: absolute;
+  right: 40%;
+  top: 15%;
+  height: 70%;
+  width: 2px;
+  background-color: #d0d0d0;
+}
+
+.featureIcon {
+  width: 55px;
+  height: 55px;
+  object-fit: contain;
+}
+
+.featureContent {
+  min-width: 0;
 }
 
 .heading {
   margin: 0;
   color: #163b7c;
   font-weight: 700;
-}
 
-.eyebrow {
-  font-weight: 700;
-}
-
-.description {
-  line-height: 1.8;
-  color: #6c6c6c;
-  max-width: 80%;
+  /* Keeps heading in one line */
+  white-space: nowrap;
 }
 
 .content {
-  display: flex;
-  flex-direction: column;
-  gap: var(--space-4);
-  justify-self: flex-start;
-}
-
-.beyondImage {
-  width: 525px;
-  height: 324px;
-  border-radius: 14px;
-  object-fit: cover;
+  /* margin-top: 8px; */
+  color: #6c6c6c;
+  line-height: 1.5;
 }

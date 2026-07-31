@@ -27,9 +27,9 @@ const BestCharge = () => {
                   and long-term performance.
                 </p>
               </div>
-            </div>
 
-            <div className={styles.divider}></div>
+              <div className={styles.divider}></div>
+            </div>
 
             {/* Sustainable Future */}
             <div className={styles.featureItem}>
@@ -47,9 +47,8 @@ const BestCharge = () => {
                   <br />a better tomorrow.
                 </p>
               </div>
+              <div className={styles.divider}></div>
             </div>
-
-            <div className={styles.divider}></div>
 
             {/* Trusted Partnership */}
             <div className={styles.featureItem}>
