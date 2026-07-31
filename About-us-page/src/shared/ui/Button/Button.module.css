@@ -3,7 +3,6 @@
   border-radius: 8px;
   padding: 10px 22px;
   background-color: #55b56c;
-
   color: white;
   width: fit-content;
   font-size: 22px;
@@ -13,6 +12,10 @@
   /* margin-right: 30px; */
   cursor: pointer;
   font-family: "Manrope", sans-serif;
+}
+
+.primary:hover {
+  background: #55b56c;
 }
 
 .secondary {

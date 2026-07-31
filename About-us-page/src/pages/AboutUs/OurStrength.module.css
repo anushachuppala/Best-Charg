@@ -86,8 +86,8 @@ body {
   flex-direction: column;
   justify-content: center;
   align-items: flex-start;
-  padding: 30px 20px;
-  gap: var(--space-1);
+  padding: 30px 40px;
+  gap: var(--space-4);
 }
 
 .iconCircle {
@@ -105,7 +105,7 @@ body {
   color: #163b7c;
   font-size: 20px;
   font-weight: 800px;
-  padding: 2px 15px 10px 10px;
+  padding: 2px 15px 10px 0px;
   position: relative;
   z-index: 2;
   display: grid;
@@ -167,8 +167,8 @@ img {
 /* arrows */
 
 .arrow {
-  width: 45px;
-  height: 45px;
+  width: 60px;
+  height: 60px;
   border: none;
   border-radius: 50%;
   position: absolute;
@@ -188,15 +188,21 @@ img {
 }
 
 .leftArrow {
-  left: -1px;
-  background-color: #eeeeee;
-  color: #999999;
+  /* left: -1px; */
+  background-color: #e0e0e0;
+  color: #979797;
+  top: 210px;
+  left: -100px;
+  align-items: center;
 }
 
 .rightArrow {
   right: -1px;
   background-color: var(--color-secondary);
   color: #ffffff;
+  top: 210px;
+  right: -100px;
+  align-items: center;
 }
 
 /* slider dots */
