@@ -225,3 +225,12 @@ img {
 .activeDot {
   background-color: #ffffff;
 }
+
+.sliderWrapper {
+  width: 100%;
+  position: relative;
+}
+
+.swiper {
+  width: 100%;
+}
