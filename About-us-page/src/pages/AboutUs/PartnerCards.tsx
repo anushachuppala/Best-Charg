@@ -29,7 +29,7 @@ const CardImages = [
     image: imageCard4,
   },
   {
-    id: 4,
+    id: 5,
     // title: "card 4",
     image: imageCard4,
   },
@@ -37,6 +37,20 @@ const CardImages = [
 
 const PartnerCards = () => {
   const [currentIndex, setCurrentIndex] = useState(0);
+  const cardPerView = 4;
+  const visibleCards = [];
+
+  for (let i = 0; i < cardPerView; i++) {
+    visibleCards.push(CardImages[(currentIndex + i) % CardImages.length]);
+  }
+
+  const nextSlide = () => {
+    setCurrentIndex((currentIndex + 1) % CardImages.length); //swiper go backs to the beginning
+  };
+
+  const previousSlide = () => {
+    setCurrentIndex((currentIndex - 1 + CardImages.length) % CardImages.length);
+  };
 
   return (
     <Section>
@@ -48,14 +62,36 @@ const PartnerCards = () => {
             <p className={styles.heading}>Productive Charger Partners </p>
           </header>
 
-          <div className={styles.ImageContainer}>
-            <div className={styles.ImageWrapper}>
-              {CardImages.map((card) => (
-                <div key={card.id} className={styles.card}>
-                  <img src={card.image} />
-                </div>
-              ))}
+          <div className={styles.carousel}>
+            <button
+              className={`${styles.arrow} ${styles.leftArrow}`}
+              onClick={previousSlide}
+            >
+              {"<"}
+            </button>
+
+            <div className={styles.ImageContainer}>
+              <div className={styles.ImageWrapper}>
+                {visibleCards.map((card) => (
+                  <div key={card.id} className={styles.card}>
+                    <img src={card.image} />
+                  </div>
+                ))}
+              </div>
             </div>
+
+            <button
+              className={`${styles.arrow} ${styles.rightArrow}`}
+              onClick={nextSlide}
+            >
+              {">"}
+            </button>
+          </div>
+
+          <div className={styles.dots}>
+            {CardImages.map((card) => (
+              <button key={card.id}></button>
+            ))}
           </div>
         </div>
       </Container>
