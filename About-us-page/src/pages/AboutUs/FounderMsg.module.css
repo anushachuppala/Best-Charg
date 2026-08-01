@@ -1,0 +1,96 @@
+/* * {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.mainContainer {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  gap: 52px;
+  padding: 45px 100px;
+  background: rgba(22, 59, 124, 0.05);
+} */
+
+/* Image */
+
+.imageWrapper {
+  /* flex: 0 0 303px; */
+}
+
+/* .founderImage {
+  width: 303px;
+  height: 303px;
+  display: block;
+  object-fit: cover;
+  border-radius: 50%;
+} */
+
+/*  Content  */
+
+/* .messageContent {
+  max-width: 500px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+} */
+
+/* Quote mark */
+
+/* .quoteIcon {
+  color: var(--color-secondary);
+  font-size: 58px;
+  font-weight: 700;
+  line-height: 35px;
+  height: 35px;
+} */
+
+/* Founder Message */
+
+/* .smallHeading {
+  padding: 0 0 10px;
+  color: #55b56c;
+  font-size: 18px;
+  font-weight: 700;
+  font-family: "Manrope", sans-serif;
+} */
+
+/* Description */
+/* 
+.description {
+  max-width: 500px;
+  margin: 0 0 14px;
+  color: #666666;
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 1.5;
+  font-family: "Manrope", sans-serif;
+} */
+
+/* .icons {
+  display: flex;
+  width: 32px;
+  height: 32px;
+  gap: var(--space-2);
+} */
+/* Founder name */
+
+/* .founderName {
+  margin: 0;
+  color: #163b7c;
+  font-size: 24px;
+  font-weight: 600;
+  font-family: "Manrope", sans-serif;
+} */
+
+/* Designation */
+
+/* .designation {
+  margin: 2px 0 0;
+  color: #6c6c6c;
+  font-size: 15px;
+  font-weight: 700;
+  font-family: "Manrope", sans-serif;
+} */

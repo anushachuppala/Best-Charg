@@ -1,63 +1,51 @@
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
-
-.partnerHeader {
+.PartnerHeader {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
   text-align: center;
-  margin-bottom: 25px;
+
+  /* border: 2px solid red; */
 }
 
 .title {
-  /* margin: 0 0 4px; */
   font-size: 36px;
   font-weight: 800;
-  line-height: 1.2;
   color: #163b7c;
 }
 
 .heading {
-  margin: 0;
   font-size: 18px;
   font-weight: 500;
-  line-height: 1.4;
   color: #6c6c6c;
-}
-img {
-  width: 100%;
-  height: 100%;
+  margin-left: -2px;
 }
 
-/* Partner cards */
-
-.cardWrapper {
+.ImageContainer {
   width: 100%;
+  height: 200px;
+  padding: 30px 30px;
+  /* border: 2px solid yellowgreen; */
+}
+
+.ImageWrapper {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
-  border: 1px solid #eeeeee;
-  overflow: hidden;
-  gap: var(--space-8);
+  gap: 20px;
 }
 
 .card {
-  min-width: 0;
-  width: 100%;
-  height: 95px;
+  /* border: 1px solid red; */
+  background-color: #ffffff;
+  box-shadow: 0px 4px 10px #9c9c9c40;
+  border-radius: 8px;
+  padding: 20px;
   display: flex;
-  align-items: center;
   justify-content: center;
-  padding: 15px 25px;
-  border-right: 1px solid #eeeeee;
+  align-items: center;
 }
 
-.card:last-child {
-  /* border-right: none; */
-}
-
-.cardImage {
-  width: 260px;
-  height: auto;
-  display: flex;
-  object-fit: contain;
+.card img {
+  width: 100%;
+  height: 100px;
 }

@@ -4,7 +4,7 @@ import ChargingSolutions from "./ChargingSolutions";
 import OurStrength from "./OurStrength";
 import BeyondCharge from "./BeyondCharge";
 import PartnerCards from "./PartnerCards";
-import FounderMsg from "./FounderMsg";
+// import FounderMsg from "./FounderMsg";
 
 // import NavBar from "../../widgets/NavBar";
 
@@ -17,7 +17,7 @@ const AboutPage = () => {
       <OurStrength />
       <BeyondCharge />
       <PartnerCards />
-      <FounderMsg />
+      {/* <FounderMsg /> */}
     </main>
   );
 };

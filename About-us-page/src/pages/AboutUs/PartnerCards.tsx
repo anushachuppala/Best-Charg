@@ -6,44 +6,49 @@ import imageCard2 from "../../assets/images/About-page/img2.png";
 import imageCard3 from "../../assets/images/About-page/img3.png";
 import imageCard4 from "../../assets/images/About-page/img4.png";
 
+const CardImages = [
+  {
+    id: 1,
+    // title: "card 1",
+    image: imageCard1,
+  },
+  {
+    id: 2,
+    // title: "card 2",
+    image: imageCard2,
+  },
+  {
+    id: 3,
+    // title: "card 3",
+    image: imageCard3,
+  },
+  {
+    id: 4,
+    // title: "card 4",
+    image: imageCard4,
+  },
+];
+
 const PartnerCards = () => {
   return (
     <Section>
       <Container>
         <Panel>
-          <div className={styles.partnerHeader}>
-            <h2 className={styles.title}>Partners</h2>
+          <div className={styles.PartnerHeader}>
+            <header>
+              <h2 className={styles.title}>Partners</h2>
 
-            <p className={styles.heading}>Productive Charger Partners</p>
-          </div>
+              <p className={styles.heading}>Productive Charger Partners </p>
+            </header>
 
-          <div className={styles.cardWrapper}>
-            <div className={styles.card}>
-              <img
-                src={imageCard1}
-                alt="JioThings"
-                className={styles.cardImage}
-              />
-            </div>
-
-            <div className={styles.card}>
-              <img
-                src={imageCard2}
-                alt="Schneider Electric"
-                className={styles.cardImage}
-              />
-            </div>
-
-            <div className={styles.card}>
-              <img
-                src={imageCard3}
-                alt="TruePower"
-                className={styles.cardImage}
-              />
-            </div>
-
-            <div className={styles.card}>
-              <img src={imageCard4} alt="LECS" className={styles.cardImage} />
+            <div className={styles.ImageContainer}>
+              <div className={styles.ImageWrapper}>
+                {CardImages.map((card) => (
+                  <div key={card.id} className={styles.card}>
+                    <img src={card.image} />
+                  </div>
+                ))}
+              </div>
             </div>
           </div>
         </Panel>
