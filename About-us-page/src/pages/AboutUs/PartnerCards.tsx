@@ -37,6 +37,7 @@ const CardImages = [
 
 const PartnerCards = () => {
   const [currentIndex, setCurrentIndex] = useState(0);
+  console.log(currentIndex);
   const cardPerView = 4;
   const visibleCards = [];
 
@@ -89,8 +90,12 @@ const PartnerCards = () => {
           </div>
 
           <div className={styles.dots}>
-            {CardImages.map((card) => (
-              <button key={card.id}></button>
+            {CardImages.map((card, index) => (
+              <button
+                key={card.id}
+                className={currentIndex === index ? styles.activeDot : ""}
+                onClick={() => setCurrentIndex(index)}
+              ></button>
             ))}
           </div>
         </div>
