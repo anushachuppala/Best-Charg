@@ -1,5 +1,6 @@
 import styles from "./PartnerCards.module.css";
-import { Section, Container, Panel } from "../../shared/layout";
+import { Section, Container } from "../../shared/layout";
+import { useState } from "react";
 
 import imageCard1 from "../../assets/images/About-page/img1.png";
 import imageCard2 from "../../assets/images/About-page/img2.png";
@@ -27,31 +28,36 @@ const CardImages = [
     // title: "card 4",
     image: imageCard4,
   },
+  {
+    id: 4,
+    // title: "card 4",
+    image: imageCard4,
+  },
 ];
 
 const PartnerCards = () => {
+  const [currentIndex, setCurrentIndex] = useState(0);
+
   return (
     <Section>
       <Container>
-        <Panel>
-          <div className={styles.PartnerHeader}>
-            <header>
-              <h2 className={styles.title}>Partners</h2>
+        <div className={styles.PartnerHeader}>
+          <header>
+            <h2 className={styles.title}>Partners</h2>
 
-              <p className={styles.heading}>Productive Charger Partners </p>
-            </header>
+            <p className={styles.heading}>Productive Charger Partners </p>
+          </header>
 
-            <div className={styles.ImageContainer}>
-              <div className={styles.ImageWrapper}>
-                {CardImages.map((card) => (
-                  <div key={card.id} className={styles.card}>
-                    <img src={card.image} />
-                  </div>
-                ))}
-              </div>
+          <div className={styles.ImageContainer}>
+            <div className={styles.ImageWrapper}>
+              {CardImages.map((card) => (
+                <div key={card.id} className={styles.card}>
+                  <img src={card.image} />
+                </div>
+              ))}
             </div>
           </div>
-        </Panel>
+        </div>
       </Container>
     </Section>
   );
