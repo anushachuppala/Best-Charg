@@ -24,19 +24,25 @@ const FounderMsg = () => {
                 <img src={icon} />
               </div>
 
-              <p className={styles.smallHeading}>Founder Message</p>
+              <h2 className={`h2-secondary ${styles.smallHeading}`}>
+                Founder Message
+              </h2>
 
-              <h2 className={styles.description}>
+              <p className={`18-neutral-600 ${styles.description}`}>
                 At BestCharg, our vision is simple to create a reliable and
                 sustainable EV charging ecosystem that empowers lives and builds
                 a cleaner tomorrow. We are committed to innovation, quality, and
                 customer satisfaction, driving every solution we build.
-              </h2>
+              </p>
 
               <div className={styles.founderInfo}>
-                <h3 className={styles.founderName}>Surekha Chitti</h3>
+                <h3 className={`h3-primary ${styles.founderName}`}>
+                  Surekha Chitti
+                </h3>
 
-                <p className={styles.designation}>Founder & CEO, Best Charg</p>
+                <h2 className={`18-neutral-600 ${styles.designation}`}>
+                  Founder & CEO, Best Charg
+                </h2>
               </div>
             </div>
           </div>

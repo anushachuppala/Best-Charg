@@ -8,6 +8,7 @@
   display: grid;
   grid-template-columns: auto 1fr;
   align-items: center;
+  justify-self: center;
   gap: 40px;
 }
 
@@ -21,7 +22,7 @@
 .founderImage {
   width: 263px;
   height: 310px;
-  display: grid;
+  display: block;
   object-fit: cover;
   gap: 24px;
 }
@@ -39,7 +40,6 @@
 /* Founder Message */
 
 .smallHeading {
-  color: #55b56c;
   font-size: 18px;
   font-weight: 700;
   gap: 10px;
@@ -50,8 +50,8 @@
 
 .description {
   color: #666666;
-  font-size: 17px;
-  font-weight: 500;
+  font-size: 18px;
+  font-weight: 800;
   line-height: 1.5;
   gap: 20px;
   font-family: "Manrope", sans-serif;
@@ -75,7 +75,7 @@ img {
 .founderInfo {
   display: flex;
   flex-direction: column;
-  gap: var(--space-2);
+  gap: var(--space-1);
 }
 
 .founderName {
@@ -89,8 +89,6 @@ img {
 /* Designation */
 
 .designation {
-  color: #6c6c6c;
-  font-size: 15px;
-  font-weight: 600;
+  font-weight: 800;
   font-family: "Manrope", sans-serif;
 }

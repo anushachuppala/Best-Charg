@@ -5,6 +5,7 @@ import OurStrength from "./OurStrength";
 import BeyondCharge from "./BeyondCharge";
 import PartnerCards from "./PartnerCards";
 import FounderMsg from "./FounderMsg";
+// import Infrastructure from "./Infrastructure";
 
 // import NavBar from "../../widgets/NavBar";
 
@@ -18,6 +19,7 @@ const AboutPage = () => {
       <BeyondCharge />
       <PartnerCards />
       <FounderMsg />
+      {/* <Infrastructure /> */}
     </main>
   );
 };

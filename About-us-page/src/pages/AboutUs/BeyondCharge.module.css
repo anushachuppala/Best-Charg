@@ -45,3 +45,33 @@
   padding: 0px 25px 25px 40px;
   border-radius: 1.5rem;
 }
+
+@media (max-width: 767px) {
+  .strengthCard {
+    display: flex;
+    flex-direction: column;
+    min-height: auto;
+  }
+
+  .contentWrapper {
+    order: 1;
+    width: 100%;
+    padding: 25px 20px;
+  }
+
+  .imageWrapper {
+    order: 2;
+    width: 100%;
+    height: 250px;
+    flex-shrink: 0;
+    padding: 5px;
+    display: block;
+  }
+
+  .strengthImage {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+  }
+}
