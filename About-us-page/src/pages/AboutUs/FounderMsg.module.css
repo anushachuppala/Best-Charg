@@ -1,9 +1,3 @@
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
-
 .FounderSection {
   width: 100%;
   height: 100%;
@@ -11,25 +5,25 @@
 }
 
 .mainContainer {
-  display: flex;
+  display: grid;
+  grid-template-columns: auto 1fr;
   align-items: center;
-  gap: 52px;
-  padding: 45px 100px;
+  gap: 40px;
+}
+
+.imageWrapper {
+  width: 303px;
+  height: 303px;
 }
 
 /* Image */
 
-.imageWrapper {
-  flex: 0 0 303px;
-}
-
 .founderImage {
-  width: 305px;
-  height: 307px;
-  display: block;
+  width: 263px;
+  height: 310px;
+  display: grid;
   object-fit: cover;
-  border-radius: 50%;
-  background: #a09b9b;
+  gap: 24px;
 }
 
 /*  Content  */
@@ -39,24 +33,12 @@
   display: flex;
   flex-direction: column;
   align-items: flex-start;
-}
-
-/* Quote mark */
-
-.quoteIcon {
-  color: var(--color-secondary);
-  font-size: 58px;
-  font-weight: 700;
-  line-height: 48px;
-  top: 68px;
-  left: 273px;
-  height: 35px;
+  gap: var(--space-5);
 }
 
 /* Founder Message */
 
 .smallHeading {
-  padding: 0 0 10px;
   color: #55b56c;
   font-size: 18px;
   font-weight: 700;
@@ -67,24 +49,32 @@
 /* Description */
 
 .description {
-  max-width: 600px;
-  padding: 0 0 14px;
   color: #666666;
-  font-size: 18px;
-  font-weight: 400;
+  font-size: 17px;
+  font-weight: 500;
   line-height: 1.5;
   gap: 20px;
   font-family: "Manrope", sans-serif;
 }
 
-.icons {
+.icon {
+  font-size: 58px;
+  font-weight: 700;
+  height: 35px;
+  line-height: 48px;
+}
+
+img {
   display: flex;
   align-items: center;
   justify-content: center;
-  width: 40px;
-  height: 40px;
-  transform: translateX(130px);
-  margin-top: 20px;
+  width: 30px;
+  height: 30px;
+}
+
+.founderInfo {
+  display: flex;
+  flex-direction: column;
   gap: var(--space-2);
 }
 
@@ -99,9 +89,8 @@
 /* Designation */
 
 .designation {
-  margin: 2px 0 0;
   color: #6c6c6c;
   font-size: 15px;
-  font-weight: 700;
+  font-weight: 600;
   font-family: "Manrope", sans-serif;
 }

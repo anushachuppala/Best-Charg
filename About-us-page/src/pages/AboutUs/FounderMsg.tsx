@@ -2,10 +2,7 @@ import styles from "./FounderMsg.module.css";
 import { Section, Container, Panel } from "../../shared/layout";
 
 import icon from "../../assets/images/About-page/icon.png";
-import mainImage from "../../assets/images/About-page/mainImg.png";
-import LinkedIn from "../../assets/images/About-page/LinkedIn.png";
-import Twitter from "../../assets/images/About-page/Twitter.png";
-import Instagram from "../../assets/images/About-page/Instagram.png";
+import mainImage from "../../assets/images/About-page/mainImage.png";
 
 const FounderMsg = () => {
   return (
@@ -20,12 +17,6 @@ const FounderMsg = () => {
                 alt="Founder"
                 className={styles.founderImage}
               />
-
-              <div className={styles.icons}>
-                <img src={LinkedIn} alt="LinkedIn icon" />
-                <img src={Twitter} alt="Twitter icon" />
-                <img src={Instagram} alt="Instagram icon" />
-              </div>
             </div>
 
             <div className={styles.messageContent}>
@@ -42,9 +33,11 @@ const FounderMsg = () => {
                 customer satisfaction, driving every solution we build.
               </h2>
 
-              <h3 className={styles.founderName}>Surekha Chitti</h3>
+              <div className={styles.founderInfo}>
+                <h3 className={styles.founderName}>Surekha Chitti</h3>
 
-              <p className={styles.designation}>Founder & CEO, Best Charg</p>
+                <p className={styles.designation}>Founder & CEO, Best Charg</p>
+              </div>
             </div>
           </div>
         </Panel>
