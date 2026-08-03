@@ -36,7 +36,11 @@ function HeroSection() {
               </p>
 
               <div className="heroButtons">
-                <Button text="Explore Solutions" variant="primary" />
+                <Button
+                  text="Explore Solutions"
+                  variant="primary"
+                  className="btn-one"
+                />
                 <Button text="Talk to Our Experts" variant="secondary" />
               </div>
             </div>

@@ -1,32 +1,37 @@
-// import styles from "./FounderMsg.module.css";
-// import { Section, Container, Panel } from "../../shared/layout";
+import styles from "./FounderMsg.module.css";
+import { Section, Container, Panel } from "../../shared/layout";
 
-// import mainImage from "../../assets/images/About-page/mainImg.png";
-// import LinkedIn from "../../assets/images/About-page/LinkedIn.png";
-// import Twitter from "../../assets/images/About-page/Twitter.png";
-// import Instagram from "../../assets/images/About-page/Instagram.png";
+import icon from "../../assets/images/About-page/icon.png";
+import mainImage from "../../assets/images/About-page/mainImg.png";
+import LinkedIn from "../../assets/images/About-page/LinkedIn.png";
+import Twitter from "../../assets/images/About-page/Twitter.png";
+import Instagram from "../../assets/images/About-page/Instagram.png";
 
-// const FounderMsg = () => {
-//   return (
-//     <Section>
-//       <Container>
-//         <Panel>
-//           <div className={styles.mainContainer}>
-//             {/* Founder Image */}
-//             <div className={styles.imageWrapper}>
-//               <img
-//                 src={mainImage}
-//                 alt="Founder"
-//                 className={styles.founderImage}
-//               />
-//             </div>
+const FounderMsg = () => {
+  return (
+    <Section className={styles.FounderSection}>
+      <Container>
+        <Panel>
+          <div className={styles.mainContainer}>
+            {/* Founder Image */}
+            <div className={styles.imageWrapper}>
+              <img
+                src={mainImage}
+                alt="Founder"
+                className={styles.founderImage}
+              />
 
-{
-  /* Founder Message */
-}
-{
-  /* <div className={styles.messageContent}>
-              <div className={styles.quoteIcon}>“</div>
+              <div className={styles.icons}>
+                <img src={LinkedIn} alt="LinkedIn icon" />
+                <img src={Twitter} alt="Twitter icon" />
+                <img src={Instagram} alt="Instagram icon" />
+              </div>
+            </div>
+
+            <div className={styles.messageContent}>
+              <div className={styles.quoteIcon}>
+                <img src={icon} />
+              </div>
 
               <p className={styles.smallHeading}>Founder Message</p>
 
@@ -36,12 +41,6 @@
                 a cleaner tomorrow. We are committed to innovation, quality, and
                 customer satisfaction, driving every solution we build.
               </h2>
-
-              <div className={styles.icons}>
-                <img src={LinkedIn} alt="LinkedIn iconn" />
-                <img src={Twitter} alt="Twitter iconn" />
-                <img src={Instagram} alt="Instagram iconn" />
-              </div>
 
               <h3 className={styles.founderName}>Surekha Chitti</h3>
 
@@ -54,5 +53,4 @@
   );
 };
 
-export default FounderMsg; */
-}
+export default FounderMsg;

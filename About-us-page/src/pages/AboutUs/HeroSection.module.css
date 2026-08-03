@@ -86,3 +86,30 @@
   line-height: 1.45;
   gap: 30px;
 }
+
+/* // Mobile Responsiveness // */
+
+@media (max-width: 480px) {
+  .smallHeading {
+    display: grid;
+    align-items: center;
+    justify-content: center;
+    color: #55b56c;
+    font-size: 16px;
+    font-weight: 800;
+    gap: 50px;
+  }
+
+  .btn-one {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .heroTitle {
+    color: #ffffff;
+    font-size: 30px;
+    font-weight: 700;
+    gap: 60px;
+  }
+}

@@ -70,19 +70,11 @@
   transition: transform 0.2s ease;
 }
 
-.arrow:hover {
-  transform: scale(1.08);
-}
-
-.leftArrow {
-  background-color: #e0e0e0e0;
-  color: #979797;
+.nextSlideIcon {
   align-items: center;
 }
 
-.rightArrow {
-  background: #55b56c;
-  color: #ffffff;
+.previousSlideIcon {
   align-items: center;
 }
 

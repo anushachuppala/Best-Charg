@@ -2,6 +2,8 @@ import styles from "./PartnerCards.module.css";
 import { Section, Container } from "../../shared/layout";
 import { useState, useCallback } from "react";
 
+import previousSlideIcon from "../../assets/images/About-page/PreviousSlide.png";
+import nextSlideIcon from "../../assets/images/About-page/nextSlide.png";
 import imageCard1 from "../../assets/images/About-page/img1.png";
 import imageCard2 from "../../assets/images/About-page/img2.png";
 import imageCard3 from "../../assets/images/About-page/img3.png";
@@ -65,12 +67,11 @@ const PartnerCards = () => {
           </header>
 
           <div className={styles.carousel}>
-            <button
-              className={`${styles.arrow} ${styles.leftArrow}`}
+            <img
+              src={previousSlideIcon}
+              className={styles.arrow}
               onClick={previousSlide}
-            >
-              {"<"}
-            </button>
+            />
 
             <div className={styles.ImageContainer}>
               <div className={styles.ImageWrapper}>
@@ -82,12 +83,11 @@ const PartnerCards = () => {
               </div>
             </div>
 
-            <button
-              className={`${styles.arrow} ${styles.rightArrow}`}
+            <img
+              src={nextSlideIcon}
+              className={styles.arrow}
               onClick={nextSlide}
-            >
-              {">"}
-            </button>
+            />
           </div>
 
           <div className={styles.dots}>
