@@ -99,10 +99,13 @@
 
 /* Responsiveness */
 
-/* Tablet */
-@media (max-width: 1024px) {
+@media (max-width: 768px) {
+  .PartnerHeader {
+    padding: 0 20px;
+  }
+
   .title {
-    font-size: 32px;
+    font-size: 28px;
   }
 
   .heading {
@@ -110,59 +113,31 @@
   }
 
   .ImageContainer {
+    width: 100%;
     height: auto;
-    padding: 25px;
-  }
-
-  .ImageWrapper {
-    grid-template-columns: repeat(2, 1fr);
-    gap: 20px;
-  }
-
-  .card img {
-    width: 170px;
-    height: 90px;
-  }
-
-  .arrow {
-    width: 45px;
-    height: 45px;
-  }
-}
-
-/* Mobile */
-@media (max-width: 768px) {
-  .title {
-    font-size: 28px;
-  }
-
-  .heading {
-    font-size: 15px;
-    margin-left: 0;
-    padding: 0 15px;
-  }
-
-  .ImageContainer {
-    height: auto;
-    padding: 20px 15px;
+    padding: 20px 0;
   }
 
   .ImageWrapper {
     grid-template-columns: 1fr;
-    gap: 15px;
-  }
-
-  .card {
-    padding: 12px;
-  }
-
-  .card img {
-    width: 150px;
-    height: 80px;
+    justify-items: center;
   }
 
   .carousel {
-    gap: 12px;
+    width: 100%;
+    justify-content: center;
+    gap: 10px;
+  }
+
+  .card {
+    width: 260px;
+    padding: 15px;
+    margin: 0 auto;
+  }
+
+  .card img {
+    width: 180px;
+    height: 90px;
   }
 
   .arrow {
@@ -170,13 +145,8 @@
     height: 40px;
     font-size: 18px;
   }
-
-  .dots {
-    margin-top: 15px;
-  }
 }
 
-/* Small Mobile */
 @media (max-width: 480px) {
   .title {
     font-size: 24px;
@@ -186,27 +156,26 @@
     font-size: 14px;
   }
 
-  .ImageContainer {
-    padding: 15px 10px;
+  .carousel {
+    gap: 5px;
+  }
+
+  .card {
+    width: 220px;
   }
 
   .card img {
-    width: 120px;
-    height: 70px;
+    width: 150px;
+    height: 80px;
   }
 
   .arrow {
-    width: 36px;
-    height: 36px;
+    width: 35px;
+    height: 35px;
     font-size: 16px;
   }
 
   .dots {
-    gap: 8px;
-  }
-
-  .dots button {
-    width: 8px;
-    height: 8px;
+    margin-top: 15px;
   }
 }

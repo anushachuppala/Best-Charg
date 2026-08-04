@@ -85,17 +85,6 @@
   gap: var(--space-4);
 }
 
-/* .iconCircle {
-  position: absolute;
-  width: 50px;
-  height: 50px;
-  border-radius: 50%;
-  background-color: var(--color-secondary);
-  top: 67px;
-  left: 27px;
-  z-index: 1;
-} */
-
 .text {
   color: #163b7c;
   font-size: 20px;
