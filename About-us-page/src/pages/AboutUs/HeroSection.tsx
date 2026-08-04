@@ -35,7 +35,7 @@ function HeroSection() {
                 confidently toward cleaner transportation.
               </p>
 
-              <div className="heroButtons">
+              <div className={styles.heroButtons}>
                 <Button
                   text="Explore Solutions"
                   variant="primary"

@@ -29,7 +29,7 @@ const BeyondCharge = () => {
 
               <Button text="Explore Best Hub" variant="primary" />
             </div>
-            <div className="page-col-lg-6">
+            <div className="page-col-12 page-col-lg-6">
               <img
                 src={BeyondImage}
                 alt="Best Charge EV charging station"

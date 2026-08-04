@@ -24,7 +24,6 @@
   width: 100%;
   height: 200px;
   padding: 30px 35px;
-  /* border: 2px solid yellowgreen; */
 }
 
 .ImageWrapper {
@@ -96,4 +95,118 @@
 
 .dots button.activeDot {
   background-color: black !important;
+}
+
+/* Responsiveness */
+
+/* Tablet */
+@media (max-width: 1024px) {
+  .title {
+    font-size: 32px;
+  }
+
+  .heading {
+    font-size: 16px;
+  }
+
+  .ImageContainer {
+    height: auto;
+    padding: 25px;
+  }
+
+  .ImageWrapper {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+  }
+
+  .card img {
+    width: 170px;
+    height: 90px;
+  }
+
+  .arrow {
+    width: 45px;
+    height: 45px;
+  }
+}
+
+/* Mobile */
+@media (max-width: 768px) {
+  .title {
+    font-size: 28px;
+  }
+
+  .heading {
+    font-size: 15px;
+    margin-left: 0;
+    padding: 0 15px;
+  }
+
+  .ImageContainer {
+    height: auto;
+    padding: 20px 15px;
+  }
+
+  .ImageWrapper {
+    grid-template-columns: 1fr;
+    gap: 15px;
+  }
+
+  .card {
+    padding: 12px;
+  }
+
+  .card img {
+    width: 150px;
+    height: 80px;
+  }
+
+  .carousel {
+    gap: 12px;
+  }
+
+  .arrow {
+    width: 40px;
+    height: 40px;
+    font-size: 18px;
+  }
+
+  .dots {
+    margin-top: 15px;
+  }
+}
+
+/* Small Mobile */
+@media (max-width: 480px) {
+  .title {
+    font-size: 24px;
+  }
+
+  .heading {
+    font-size: 14px;
+  }
+
+  .ImageContainer {
+    padding: 15px 10px;
+  }
+
+  .card img {
+    width: 120px;
+    height: 70px;
+  }
+
+  .arrow {
+    width: 36px;
+    height: 36px;
+    font-size: 16px;
+  }
+
+  .dots {
+    gap: 8px;
+  }
+
+  .dots button {
+    width: 8px;
+    height: 8px;
+  }
 }

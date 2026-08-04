@@ -7,7 +7,7 @@
   width: fit-content;
   font-size: 22px;
   font-weight: 500;
-  margin-top: 20px;
+  /* margin-top: 20px; */
   /* margin-left: 6px; */
   /* margin-right: 30px; */
   cursor: pointer;
@@ -19,17 +19,16 @@
 }
 
 .secondary {
-  border-radius: 8px;
-  padding: 10px 22px;
   color: white;
   font-size: 22px;
   font-weight: 500;
-  margin-left: 10px;
-  cursor: pointer;
-  min-width: 226px;
+  /* margin-top: 20px; */
+  border-radius: 8px;
+  padding: 10px 22px;
+  width: fit-content;
   border: 1px solid #ffffff;
   background-color: transparent;
-  color: #ffffff;
+  cursor: pointer;
   font-family: "Manrope", sans-serif;
 }
 

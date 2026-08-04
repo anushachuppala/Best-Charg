@@ -92,3 +92,74 @@ img {
   font-weight: 800;
   font-family: "Manrope", sans-serif;
 }
+
+/* responsiveness */
+@media (max-width: 768px) {
+  .FounderSection {
+    width: 100%;
+    height: auto;
+  }
+
+  .mainContainer {
+    grid-template-columns: 1fr;
+    justify-items: center;
+    text-align: center;
+    gap: 30px;
+  }
+
+  .imageWrapper {
+    width: 100%;
+    height: auto;
+    display: flex;
+    justify-content: center;
+  }
+
+  .founderImage {
+    width: 220px;
+    height: 260px;
+  }
+
+  .messageContent {
+    max-width: 100%;
+    align-items: center;
+    gap: var(--space-4);
+  }
+
+  .smallHeading {
+    font-size: 16px;
+  }
+
+  .description {
+    font-size: 16px;
+    line-height: 1.6;
+  }
+
+  .icon {
+    font-size: 45px;
+    height: auto;
+    line-height: 40px;
+  }
+
+  .founderName {
+    font-size: 20px;
+  }
+
+  .designation {
+    font-size: 14px;
+  }
+}
+
+@media (max-width: 480px) {
+  .mainContainer {
+    gap: 20px;
+  }
+
+  .founderImage {
+    width: 180px;
+    height: 220px;
+  }
+
+  .messageContent {
+    width: 100%;
+  }
+}

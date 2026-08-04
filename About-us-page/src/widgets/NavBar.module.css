@@ -78,9 +78,16 @@
 
 /* Mobile */
 @media (max-width: 768px) {
+  .overlay {
+    position: fixed;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.45);
+    z-index: 998;
+  }
   .navbar {
     height: 72px;
     padding: 0 20px;
+    position: fixed;
   }
 
   .logoimage {
@@ -89,6 +96,19 @@
 
   .desktopButton {
     display: none;
+  }
+
+  .productsMenu {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 93%;
+    cursor: pointer;
+  }
+
+  .icon {
+    font-size: 18px;
+    flex-shrink: 0;
   }
 
   .menuButton {
@@ -107,16 +127,18 @@
     position: fixed;
     top: 72px;
     right: -100%;
-    width: 100%;
-    height: 90%;
-    background: #fff;
+    width: 80%;
+    height: 100%;
+    background: #ffffff;
+    display: flex;
     flex-direction: column;
-    align-items: flex-end;
+    align-items: stretch;
     text-align: right;
     gap: 24px;
     padding: 24px;
     transition: right 0.3s ease;
     box-sizing: border-box;
+    z-index: 999;
   }
 
   .navlinksOpen {
@@ -124,6 +146,9 @@
   }
 
   .navbar ul {
+    display: flex;
+    align-items: flex-start;
+    padding-left: 40px;
     gap: 40px;
     font-size: 20px;
   }
@@ -134,9 +159,14 @@
 
   .mobileButton {
     display: flex;
-    align-items: center;
-    justify-content: center;
+    align-items: flex-start;
     width: 100%;
-    /* margin-top: 12px; */
+    margin-top: 250px;
+  }
+
+  .desktopButton {
+    display: felx;
+    align-items: flex-start;
+    padding-bottom: 500px;
   }
 }

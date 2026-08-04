@@ -35,27 +35,38 @@
 }
 
 .content {
-  color: #6c6c6c;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  max-width: 450px;
+  gap: var(--space-4);
   line-height: 1.5;
 }
 
 .beyondImage {
   width: 100%;
   height: 90%;
-  padding: 0px 25px 25px 40px;
-  border-radius: 1.5rem;
+  /* padding: 0px 25px 25px 40px; */
+  border-radius: 10px;
 }
 
-@media (max-width: 767px) {
+@media (max-width: 408px) {
   .strengthCard {
     display: flex;
     flex-direction: column;
     min-height: auto;
   }
 
+  .page-row {
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+  }
+
   .contentWrapper {
     order: 1;
     width: 100%;
+    max-width: 450px;
     padding: 25px 20px;
   }
 
@@ -73,5 +84,12 @@
     height: 100%;
     object-fit: cover;
     display: block;
+  }
+
+  .beyondImage {
+    width: 100%;
+    height: auto;
+    padding-top: 20px;
+    object-fit: cover;
   }
 }
