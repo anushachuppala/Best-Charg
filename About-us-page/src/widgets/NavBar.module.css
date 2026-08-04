@@ -50,14 +50,14 @@
 
 /* Active link */
 
-.navbar li:nth-child(3) {
+.navbar li:nth-child(5) {
   color: #55b56c;
   font-weight: 600;
 }
 
 /* Green line under Best Hub */
 
-.navbar li:nth-child(3)::before {
+.navbar li:nth-child(5)::before {
   content: "";
   position: absolute;
   left: 0;

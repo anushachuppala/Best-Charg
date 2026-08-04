@@ -41,9 +41,9 @@ function NavBar() {
             </li>
 
             <li>Solutions</li>
-            <li className={styles.active}>Best Hub</li>
+            <li>Best Hub</li>
             <li>Blog</li>
-            <li>About us</li>
+            <li className={styles.active}>About us</li>
 
             <li className={styles.mobileButton}>
               <Button text="Get Started" variant="primary" />

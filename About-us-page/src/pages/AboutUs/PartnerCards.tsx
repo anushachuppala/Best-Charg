@@ -58,49 +58,47 @@ const PartnerCards = () => {
 
   return (
     <Section>
-      <Container>
-        <div className={styles.PartnerHeader}>
-          <header>
-            <h2 className={styles.title}>Partners</h2>
+      <div className={styles.PartnerHeader}>
+        <header>
+          <h2 className={styles.title}>Partners</h2>
 
-            <p className={styles.heading}>Productive Charger Partners</p>
-          </header>
+          <p className={styles.heading}>Productive Charger Partners</p>
+        </header>
 
-          <div className={styles.carousel}>
-            <img
-              src={previousSlideIcon}
-              className={styles.arrow}
-              onClick={previousSlide}
-            />
+        <div className={styles.carousel}>
+          <img
+            src={previousSlideIcon}
+            className={styles.arrow}
+            onClick={previousSlide}
+          />
 
-            <div className={styles.ImageContainer}>
-              <div className={styles.ImageWrapper}>
-                {visibleCards.map((card) => (
-                  <div key={card.id} className={styles.card}>
-                    <img src={card.image} alt="partner card" />
-                  </div>
-                ))}
-              </div>
+          <div className={styles.ImageContainer}>
+            <div className={styles.ImageWrapper}>
+              {visibleCards.map((card) => (
+                <div key={card.id} className={styles.card}>
+                  <img src={card.image} alt="partner card" />
+                </div>
+              ))}
             </div>
-
-            <img
-              src={nextSlideIcon}
-              className={styles.arrow}
-              onClick={nextSlide}
-            />
           </div>
 
-          <div className={styles.dots}>
-            {CardImages.map((card, index) => (
-              <button
-                key={card.id}
-                className={currentIndex === index ? styles.activeDot : ""}
-                onClick={() => setCurrentIndex(index)}
-              ></button>
-            ))}
-          </div>
+          <img
+            src={nextSlideIcon}
+            className={styles.arrow}
+            onClick={nextSlide}
+          />
         </div>
-      </Container>
+
+        <div className={styles.dots}>
+          {CardImages.map((card, index) => (
+            <button
+              key={card.id}
+              className={currentIndex === index ? styles.activeDot : ""}
+              onClick={() => setCurrentIndex(index)}
+            ></button>
+          ))}
+        </div>
+      </div>
     </Section>
   );
 };
