@@ -1,0 +1,68 @@
+.InfrastructureSection {
+  width: 100%;
+}
+
+.Container {
+  position: relative;
+  width: 100%;
+  min-height: 500px;
+  overflow: hidden;
+}
+
+/* Background */
+.backgroundImage {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  z-index: 1;
+}
+
+/* Blue overlay */
+.overlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 49, 139, 0.88);
+  z-index: 2;
+}
+
+/* Content */
+.contentWrapper {
+  position: relative;
+  z-index: 3;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  min-height: 650px;
+  padding: 60px;
+  box-sizing: border-box;
+}
+
+.leftContent {
+  width: 50%;
+}
+
+.rightContent {
+  width: 50%;
+  display: flex;
+  justify-content: center;
+}
+
+.infrastructureImage {
+  width: 100%;
+  max-width: 650px;
+  height: auto;
+  display: block;
+}
+
+.heading,
+.Description {
+  color: white;
+}
+
+.heroButtons {
+  display: flex;
+}

@@ -41,7 +41,11 @@ function HeroSection() {
                   variant="primary"
                   className="btn-one"
                 />
-                <Button text="Talk to Our Experts" variant="secondary" />
+                <Button
+                  text="Talk to Our Experts"
+                  variant="secondary"
+                  className="btn-two"
+                />
               </div>
             </div>
           </div>
