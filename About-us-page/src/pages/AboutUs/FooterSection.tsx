@@ -1,5 +1,5 @@
 import styles from "./FooterSection.module.css";
-import { Section, Container, Panel } from "../../shared/layout";
+import { Section, Container } from "../../shared/layout";
 
 import bestChargeLogo from "../../assets/images/About-page/bestCharge.png";
 import JioThings from "../../assets/images/About-page/JioThings.png";
@@ -109,57 +109,50 @@ const FooterSection = () => {
 
               {/* Links and  Newsletter */}
               <div className={styles.footerColumns}>
-                {/* Solutions */}
-                <div className={styles.footerColumn}>
-                  <h4>Our Solutions</h4>
-
-                  <a href="#">CMS</a>
-                  <a href="#">EV Mobile App</a>
-                  <a href="#">White Labeled</a>
-                  <a href="#">Solution</a>
-                  <a href="#">Host App</a>
-                  <a href="#">Roaming Solution</a>
-                </div>
-
-                {/* Products */}
-                <div className={styles.footerColumn}>
-                  <h4>Our Products</h4>
-
-                  <a href="#">Aries 7</a>
-                  <a href="#">Aries 7.4kW Pro</a>
-                  <a href="#">Aries 11</a>
-                  <a href="#">Aries 22</a>
-                  <a href="#">Polaris 30</a>
-                  <a href="#">Polaris 60</a>
-                </div>
-
-                {/* Newsletter */}
-                <div className={styles.newsletter}>
-                  <h4>Newsletter</h4>
-
-                  <p>
-                    From smart metering to substation execution, we ensure
-                    compliance, transparency, and measurable outcomes.
-                  </p>
-
-                  <div className={styles.subscribeBox}>
-                    <input
-                      type="email"
-                      placeholder="Enter Valid Email Address"
-                    />
-
-                    <button type="button">Subscribe</button>
-                  </div>
-                </div>
+                <h4>Our Solutions</h4>
+                <a href="#">CMS</a>
+                <a href="#">EV Mobile App</a>
+                <a href="#">White Labeled</a>
+                <a href="#">Solution</a>
+                <a href="#">Host App</a>
+                <a href="#">Roaming Solution</a>
               </div>
+
+              {/* Products */}
+              <div className={styles.footerColumnTwo}>
+                <h4>Our Products</h4>
+
+                <a href="#">Aries 7</a>
+                <a href="#">Aries 7.4kW Pro</a>
+                <a href="#">Aries 11</a>
+                <a href="#">Aries 22</a>
+                <a href="#">Polaris 30</a>
+                <a href="#">Polaris 60</a>
+              </div>
+
+              {/* Newsletter */}
+              {/* <div className={styles.newsletter}>
+                <h4>Newsletter</h4>
+
+                <p>
+                  From smart metering to substation execution, we ensure
+                  compliance, transparency, and measurable outcomes.
+                </p>
+
+                <div className={styles.subscribeBox}>
+                  <input type="email" placeholder="Enter Valid Email Address" />
+
+                  <button type="button">Subscribe</button>
+                </div>
+              </div> */}
             </div>
           </div>
 
           {/*  DIVIDER */}
-          <div className={styles.divider}></div>
+          {/* <div className={styles.divider}></div> */}
 
           {/*  BOTTOM FOOTER  */}
-          <div className={styles.footerBottom}>
+          {/* <div className={styles.footerBottom}>
             <div className={styles.legalLinks}>
               <a href="#">Accessibility</a>
               <a href="#">Privacy Policy</a>
@@ -183,7 +176,7 @@ const FooterSection = () => {
                 <img src={YoutubeIcon} alt="YouTube" />
               </a>
             </div>
-          </div>
+          </div> */}
         </footer>
       </Container>
     </Section>

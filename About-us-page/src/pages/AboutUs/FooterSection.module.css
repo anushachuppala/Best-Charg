@@ -7,6 +7,14 @@
   gap: var(--space-5);
 }
 
+.footerMain {
+  width: 100%;
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 60px;
+}
+
 /*CONTACT CARD*/
 
 .contentCard {
@@ -111,30 +119,103 @@
 }
 
 /* footer right */
-/* .footerRight {
+
+.footerRight {
   width: 983px;
-  height: 326px;
-  display: flex; */
-/* background-color: yellow; */
-
-/* .logos {
+  min-height: 326px;
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
-} */
+  grid-template-columns: 279px 50px 237px 180px;
+  grid-template-rows: auto auto;
+  column-gap: 30px;
+  align-items: start;
+}
+/* logos */
 
-.bestChargLogo {
-  /* display: flex; */
-  /* flex-direction: column; */
-  width: 279px;
-  height: 55px;
+.logosInfo {
+  display: contents;
 }
 
+.logos {
+  display: contents;
+}
+
+/* BestCharge */
+.bestChargLogo {
+  width: 279px;
+  height: 55px;
+  object-fit: contain;
+  grid-column: 1;
+  grid-row: 1;
+}
+
+/* Handshake */
 .handshakeLogo {
   width: 36px;
   height: 33px;
+  object-fit: contain;
+  grid-column: 2;
+  grid-row: 1;
 }
 
+/* JioThings */
 .truePowerLogo {
   width: 237px;
   height: 63px;
+  object-fit: contain;
+  grid-column: 3;
+  grid-row: 1;
+}
+
+/* our solutions */
+
+.footerColumns {
+  grid-column: 1;
+  grid-row: 2;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  margin-top: 30px;
+}
+
+.footerColumns h4 {
+  margin: 0 0 20px;
+  color: white;
+  font-size: 18px;
+  font-weight: 700;
+  font-family: "Manrope", sans-serif;
+}
+
+.footerColumns a {
+  margin: 0 0 12px;
+  color: white;
+  font-size: 15px;
+  line-height: 1.4;
+  text-decoration: none;
+  font-family: "Manrope", sans-serif;
+}
+
+.footerColumnTwo {
+  grid-column: 2;
+  grid-row: 2;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  margin-top: 30px;
+}
+
+.footerColumnTwo h4 {
+  margin: 0 0 20px;
+  color: white;
+  font-size: 18px;
+  font-weight: 700;
+  font-family: "Manrope", sans-serif;
+}
+
+.footerColumnTwo a {
+  margin: 0 0 12px;
+  color: white;
+  font-size: 15px;
+  line-height: 1.4;
+  text-decoration: none;
+  font-family: "Manrope", sans-serif;
 }
