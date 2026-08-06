@@ -1,11 +1,11 @@
 import heroImage from "../../assets/images/About-page/hero-section.png";
 import styles from "./HeroSection.module.css";
-import { Container, Panel } from "../../shared/layout";
+import { Section, Container, Panel } from "../../shared/layout";
 import Button from "../../shared/ui/Button";
 
 function HeroSection() {
   return (
-    <section className={styles.heroSection}>
+    <Section className={styles.heroSection}>
       <Container>
         <Panel>
           <header>
@@ -51,7 +51,7 @@ function HeroSection() {
           </div>
         </Panel>
       </Container>
-    </section>
+    </Section>
   );
 }
 

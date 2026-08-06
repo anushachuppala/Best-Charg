@@ -1,10 +1,10 @@
 import serviceIcon from "../../assets/images/About-page/service 1.png";
 import styles from "./BestCharge.module.css";
-import { Container, Panel } from "../../shared/layout";
+import { Section, Container, Panel } from "../../shared/layout";
 
 const BestCharge = () => {
   return (
-    <section className={styles.bestChargeSection}>
+    <Section className={styles.bestChargeSection}>
       <Container>
         <Panel>
           <div className={styles.bestChargeContainer}>
@@ -71,7 +71,7 @@ const BestCharge = () => {
           </div>
         </Panel>
       </Container>
-    </section>
+    </Section>
   );
 };
 

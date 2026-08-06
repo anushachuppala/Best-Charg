@@ -76,7 +76,157 @@
   display: none;
 }
 
-/* Mobile */
+/* 320px */
+@media (max-width: 320px) {
+  .navbar {
+    height: 65px;
+    padding: 0 10px;
+  }
+
+  .logoimage {
+    width: 120px;
+    height: auto;
+  }
+
+  .navbar ul {
+    display: none;
+  }
+
+  .menuButton {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 28px;
+    cursor: pointer;
+  }
+
+  .hamburger {
+    display: flex;
+    align-items: flex-end;
+  }
+
+  .mobileButton {
+    display: none;
+  }
+}
+
+/* 400 */
+@media (max-width: 400px) {
+  .navbar {
+    height: 70px;
+    padding: 0 12px;
+  }
+
+  .logocontainer {
+    display: flex;
+    align-items: center;
+  }
+
+  .logoimage {
+    width: 140px;
+    height: auto;
+  }
+
+  .navbar ul {
+    display: none;
+  }
+
+  .menuButton {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 30px;
+    cursor: pointer;
+  }
+
+  .hamburger {
+    display: flex;
+    align-items: flex-end;
+  }
+
+  .mobileButton {
+    display: none;
+  }
+}
+
+/* 480px Mobile*/
+@media (max-width: 480px) {
+  .navbar {
+    height: 75px;
+    padding: 0 16px;
+  }
+
+  .logocontainer {
+    display: flex;
+    align-items: center;
+  }
+
+  .logoimage {
+    width: 150px;
+    height: auto;
+  }
+
+  .navbar ul {
+    display: none;
+  }
+
+  .menuButton {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 32px;
+    cursor: pointer;
+  }
+
+  .hamburger {
+    display: flex;
+    align-items: flex-end;
+  }
+
+  .mobileButton {
+    display: none;
+  }
+}
+
+/* 576px */
+@media (max-width: 576px) {
+  .navbar {
+    height: 80px;
+    padding: 0 20px;
+  }
+
+  .logocontainer {
+    display: flex;
+    align-items: center;
+  }
+
+  .logoimage {
+    width: 160px;
+    height: auto;
+  }
+
+  .navbar ul {
+    display: none;
+  }
+
+  .menuButton {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 34px;
+    cursor: pointer;
+  }
+
+  .hamburger {
+    display: flex;
+    align-items: flex-end;
+  }
+
+  .mobileButton {
+    display: none;
+  }
+}
+/* 768px */
 @media (max-width: 768px) {
   .overlay {
     position: fixed;
@@ -125,9 +275,9 @@
 
   .navlinks {
     position: fixed;
-    top: 72px;
+    top: -1px;
     right: -100%;
-    width: 80%;
+    width: 72%;
     height: 100%;
     background: #ffffff;
     display: flex;
@@ -135,7 +285,7 @@
     align-items: stretch;
     text-align: right;
     gap: 24px;
-    padding: 24px;
+    padding: 80px 24px 24px 24px;
     transition: right 0.3s ease;
     box-sizing: border-box;
     z-index: 999;
@@ -148,25 +298,94 @@
   .navbar ul {
     display: flex;
     align-items: flex-start;
+    padding-top: 80px;
     padding-left: 40px;
-    gap: 40px;
     font-size: 20px;
   }
 
   .navbar li {
     font-size: 18px;
+    margin-top: 10px;
   }
 
   .mobileButton {
     display: flex;
     align-items: flex-start;
     width: 100%;
-    margin-top: 250px;
+  }
+}
+
+/* /1024px */
+@media (max-width: 1024px) {
+  .navbar {
+    height: 80px;
+    padding: 0 24px;
   }
 
-  .desktopButton {
-    display: felx;
-    align-items: flex-start;
-    padding-bottom: 500px;
+  .logocontainer {
+    display: flex;
+    align-items: center;
+  }
+
+  .logoimage {
+    width: 170px;
+    height: auto;
+  }
+
+  .navbar ul {
+    gap: 28px;
+  }
+
+  .navbar li {
+    font-size: 18px;
+  }
+
+  .navbar li:nth-child(5)::before {
+    bottom: -2px;
+    height: 2px;
+  }
+
+  .mobileButton {
+    display: none;
+  }
+}
+
+/* 1200px */
+@media (max-width: 1200px) {
+  .navbar {
+    height: 85px;
+    padding: 0 24px;
+  }
+
+  .logocontainer {
+    display: flex;
+    align-items: center;
+  }
+
+  .logoimage {
+    width: 180px;
+    height: auto;
+  }
+
+  .navbar ul {
+    gap: 36px;
+  }
+
+  .navbar li {
+    font-size: 20px;
+  }
+
+  .navbar li:nth-child(5)::before {
+    bottom: -2px;
+    height: 3px;
+  }
+
+  .hamburger {
+    display: flex;
+    align-items: flex-end;
+  }
+
+  .mobileButton {
+    display: none;
   }
 }

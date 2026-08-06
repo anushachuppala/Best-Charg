@@ -9,11 +9,18 @@
 /* ─────────────────────────────────────────
  * BASE DOCUMENT
  * ───────────────────────────────────────── */
-html {
+/* html {
   font-size: 16px;
   color-scheme: light;
-}
+} */
 
+html,
+body {
+  font-size: 16px;
+  color-scheme: light;
+  width: 100%;
+  overflow-x: hidden;
+}
 /* Lenis handles wheel/touch smoothing; avoid double-easing on anchor/programmatic scroll */
 html.lenis.lenis-smooth {
   scroll-behavior: auto;
