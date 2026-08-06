@@ -139,6 +139,10 @@
     cursor: pointer;
   }
 
+  .navlinks {
+    width: 15%;
+  }
+
   .hamburger {
     display: flex;
     align-items: flex-end;
@@ -226,6 +230,7 @@
     display: none;
   }
 }
+
 /* 768px */
 @media (max-width: 768px) {
   .overlay {
@@ -277,7 +282,7 @@
     position: fixed;
     top: -1px;
     right: -100%;
-    width: 72%;
+    width: 82%;
     height: 100%;
     background: #ffffff;
     display: flex;
@@ -315,21 +320,16 @@
   }
 }
 
-/* /1024px */
+/* 1024px */
+
 @media (max-width: 1024px) {
   .navbar {
     height: 80px;
     padding: 0 24px;
   }
 
-  .logocontainer {
-    display: flex;
-    align-items: center;
-  }
-
   .logoimage {
-    width: 170px;
-    height: auto;
+    width: 160px;
   }
 
   .navbar ul {
@@ -337,55 +337,26 @@
   }
 
   .navbar li {
-    font-size: 18px;
-  }
-
-  .navbar li:nth-child(5)::before {
-    bottom: -2px;
-    height: 2px;
-  }
-
-  .mobileButton {
-    display: none;
+    font-size: 16px;
   }
 }
 
-/* 1200px */
-@media (max-width: 1200px) {
+/* 800px */
+@media (max-width: 800px) {
   .navbar {
-    height: 85px;
-    padding: 0 24px;
-  }
-
-  .logocontainer {
-    display: flex;
-    align-items: center;
+    height: 75px;
+    padding: 0 18px;
   }
 
   .logoimage {
-    width: 180px;
-    height: auto;
+    width: 150px;
   }
 
   .navbar ul {
-    gap: 36px;
+    gap: 30px;
   }
 
   .navbar li {
-    font-size: 20px;
-  }
-
-  .navbar li:nth-child(5)::before {
-    bottom: -2px;
-    height: 3px;
-  }
-
-  .hamburger {
-    display: flex;
-    align-items: flex-end;
-  }
-
-  .mobileButton {
-    display: none;
+    font-size: 16px;
   }
 }
