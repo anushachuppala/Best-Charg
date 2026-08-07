@@ -1,6 +1,6 @@
 import styles from "./PartnerCards.module.css";
-import { Section, Container } from "../../shared/layout";
-import { useState, useCallback } from "react";
+import { Section } from "../../shared/layout";
+import { useState, useCallback, useEffect } from "react";
 
 import previousSlideIcon from "../../assets/images/About-page/PreviousSlide.png";
 import nextSlideIcon from "../../assets/images/About-page/nextSlide.png";
@@ -35,14 +35,35 @@ const CardImages = [
 const PartnerCards = () => {
   const [currentIndex, setCurrentIndex] = useState(0);
 
+  const [cardsPerView, setCardsPerView] = useState(4);
+
   const totalCards = CardImages.length;
 
-  const visibleCards = [
-    CardImages[currentIndex % totalCards],
-    CardImages[(currentIndex + 1) % totalCards],
-    CardImages[(currentIndex + 2) % totalCards],
-    CardImages[(currentIndex + 3) % totalCards],
-  ];
+  // responsive logic //
+  useEffect(() => {
+    const handleResize = () => {
+      if (window.innerWidth <= 768) {
+        setCardsPerView(1);
+      } else if (window.innerWidth <= 1024) {
+        setCardsPerView(3);
+      } else {
+        setCardsPerView(4);
+      }
+    };
+
+    handleResize();
+
+    window.addEventListener("resize", handleResize);
+
+    return () => {
+      window.removeEventListener("resize", handleResize);
+    };
+  }, []);
+
+  const visibleCards = Array.from(
+    { length: cardsPerView },
+    (_, index) => CardImages[(currentIndex + index) % totalCards],
+  );
 
   const nextSlide = useCallback(() => {
     setCurrentIndex((previousIndex) => {

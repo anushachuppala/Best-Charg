@@ -34,8 +34,17 @@ const Infrastructure = () => {
               </p>
 
               <div className={styles.heroButtons}>
-                <Button text="Contact Us Now" variant="primary" />
-                <Button text="Become a Partner" variant="secondary" />
+                <Button
+                  text="Contact Us Now"
+                  variant="primary"
+                  className={styles.btn}
+                />
+
+                <Button
+                  text="Become a Partner"
+                  variant="secondary"
+                  className={styles.btn}
+                />
               </div>
             </div>
 

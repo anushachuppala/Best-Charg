@@ -47,7 +47,11 @@ const ChargingSolutions = () => {
                   embrace sustainable mobility with confidence.
                 </p>
 
-                <Button text="Explore solutions" variant="primary"></Button>
+                <Button
+                  text="Explore solutions"
+                  variant="primary"
+                  className={styles.btn}
+                ></Button>
               </div>
             </div>
           </div>

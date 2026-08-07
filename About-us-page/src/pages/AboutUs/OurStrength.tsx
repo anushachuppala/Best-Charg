@@ -114,13 +114,13 @@ const OurStrength = () => {
   }, [activeIndex]);
 
   // Autoplay
-  useEffect(() => {
-    const timer = setInterval(() => {
-      nextSlide();
-    }, 6000);
+  // useEffect(() => {
+  //   const timer = setInterval(() => {
+  //     nextSlide();
+  //   }, 6000);
 
-    return () => clearInterval(timer);
-  }, [nextSlide]);
+  //   return () => clearInterval(timer);
+  // }, [nextSlide]);
 
   return (
     <Section className={styles.strengthSection}>

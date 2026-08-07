@@ -143,8 +143,23 @@
 
   .heroButtons {
     width: 100%;
+    display: flex;
     flex-direction: column;
+    align-items: center;
+    justify-content: center;
     gap: 12px;
+  }
+
+  .heroButtons button {
+    display: block;
+    align-items: center;
+    justify-self: center;
+    width: 100% !important;
+    max-width: 100%;
+    min-width: 0;
+    height: auto;
+    margin: 0 !important;
+    box-sizing: border-box;
   }
 }
 
@@ -198,8 +213,20 @@
 
   .heroButtons {
     width: 100%;
+    display: flex;
     flex-direction: column;
-    gap: 14px;
+    align-items: stretch;
+    gap: 12px;
+  }
+
+  .heroButtons button {
+    display: block;
+    width: 100% !important;
+    max-width: 100%;
+    min-width: 0;
+    height: auto;
+    margin: 0 !important;
+    box-sizing: border-box;
   }
 }
 
@@ -254,8 +281,20 @@
 
   .heroButtons {
     width: 100%;
+    display: flex;
     flex-direction: column;
-    gap: 16px;
+    align-items: stretch;
+    gap: 12px;
+  }
+
+  .heroButtons button {
+    display: block;
+    width: 100% !important;
+    max-width: 100%;
+    min-width: 0;
+    height: auto;
+    margin: 0 !important;
+    box-sizing: border-box;
   }
 }
 
@@ -309,8 +348,20 @@
 
   .heroButtons {
     width: 100%;
+    display: flex;
     flex-direction: column;
-    gap: 14px;
+    align-items: stretch;
+    gap: 12px;
+  }
+
+  .heroButtons button {
+    display: block;
+    width: 100% !important;
+    max-width: 100%;
+    min-width: 0;
+    height: auto;
+    margin: 0 !important;
+    box-sizing: border-box;
   }
 }
 
@@ -443,8 +494,16 @@
   }
 
   .heroButtons {
-    flex-direction: column;
-    align-items: flex-start;
-    gap: 20px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    width: 60%;
+    gap: 12px;
+  }
+
+  .heroButtons button {
+    width: 80%;
+    height: auto;
+    box-sizing: border-box;
   }
 }

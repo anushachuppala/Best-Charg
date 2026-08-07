@@ -87,6 +87,11 @@
   gap: var(--space-7);
 }
 
+.btn {
+  display: flex;
+  align-items: flex-end;
+}
+
 /* responsiveness */
 
 /* Tablet Responsive */

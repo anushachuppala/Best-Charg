@@ -6,47 +6,46 @@ import Button from "../../shared/ui/Button";
 function HeroSection() {
   return (
     <Section className={styles.heroSection}>
-      <Container>
+      <img
+        src={heroImage}
+        alt="Best Charg EV charging infrastructure"
+        className={styles.heroImage}
+      />
+
+      <div className={styles.heroOverlay}></div>
+
+      <Container className={styles.heroContainer}>
         <Panel>
-          <header>
-            <img
-              src={heroImage}
-              alt="EV Charging Infrastructure"
-              className={styles.heroImage}
-            />
-          </header>
+          <div className={styles.heroContent}>
+            <p className={styles.smallHeading}>ABOUT BEST CHARG</p>
 
-          <div className={styles.heroOverlay}></div>
+            <h1 className={`h1-white ${styles.heroTitle}`}>
+              Engineering the Future
+              <br />
+              of <span>EV Charging</span>
+              <br />
+              Infrastructure
+            </h1>
 
-          <div className={styles.heroContainer}>
-            <div className={styles.heroContent}>
-              <p className={styles.smallHeading}>ABOUT BEST CHARG</p>
-              <h1 className={`h1-white ${styles.heroTitle}`}>
-                Engineering the Future
-                <br />
-                of <span>EV Charging</span>
-                <br />
-                Infrastructure
-              </h1>
-              <p className={`18-white ${styles.heroDescription}`}>
-                Best Charg delivers intelligent EV charging infrastructure,
-                enterprise-grade software, and integrated mobility ecosystems —
-                helping businesses, governments, and communities transition
-                confidently toward cleaner transportation.
-              </p>
+            <p className={`18-white ${styles.heroDescription}`}>
+              Best Charg delivers intelligent EV charging infrastructure,
+              enterprise-grade software, and integrated mobility ecosystems —
+              helping businesses, governments, and communities transition
+              confidently toward cleaner transportation.
+            </p>
 
-              <div className={styles.heroButtons}>
-                <Button
-                  text="Explore Solutions"
-                  variant="primary"
-                  className="btn-one"
-                />
-                <Button
-                  text="Talk to Our Experts"
-                  variant="secondary"
-                  className="btn-two"
-                />
-              </div>
+            <div className={styles.heroButtons}>
+              <Button
+                text="Explore Solutions"
+                variant="primary"
+                className="btn-one"
+              />
+
+              <Button
+                text="Talk to Our Experts"
+                variant="secondary"
+                className="btn-two"
+              />
             </div>
           </div>
         </Panel>

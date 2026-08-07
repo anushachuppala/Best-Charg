@@ -5,6 +5,7 @@
   background-color: #55b56c;
   color: white;
   width: fit-content;
+  /* height: auto; */
   font-size: 22px;
   font-weight: 500;
   /* margin-top: 20px; */
@@ -19,15 +20,16 @@
 }
 
 .secondary {
+  border: 1px solid #ffffff;
+  border-radius: 8px;
+  padding: 10px 22px;
+  background-color: transparent;
   color: white;
   font-size: 22px;
   font-weight: 500;
-  /* margin-top: 20px; */
-  border-radius: 8px;
-  padding: 10px 22px;
   width: fit-content;
-  border: 1px solid #ffffff;
-  background-color: transparent;
+  /* height: auto; */
+  /* margin-top: 20px; */
   cursor: pointer;
   font-family: "Manrope", sans-serif;
 }
