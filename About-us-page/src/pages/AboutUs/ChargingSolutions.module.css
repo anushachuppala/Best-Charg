@@ -30,7 +30,12 @@
 .heading,
 .title {
   gap: var(--space-5);
-  font-weight: 700;
+  /* font-weight: 700; */
+}
+
+.title {
+  font-size: 36px;
+  font-weight: 500;
 }
 
 /* CONTENT */

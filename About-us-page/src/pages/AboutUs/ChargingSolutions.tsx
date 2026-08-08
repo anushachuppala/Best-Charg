@@ -1,11 +1,11 @@
 import chargingImage from "../../assets/images/About-page/charging solutions.png";
-import { Container, Panel } from "../../shared/layout";
+import { Section, Container, Panel } from "../../shared/layout";
 import styles from "./ChargingSolutions.module.css";
 import Button from "../../shared/ui/Button";
 
 const ChargingSolutions = () => {
   return (
-    <section>
+    <Section>
       <Container>
         <Panel>
           <div className="page-col-12 page-col-lg-6">
@@ -57,7 +57,7 @@ const ChargingSolutions = () => {
           </div>
         </Panel>
       </Container>
-    </section>
+    </Section>
   );
 };
 

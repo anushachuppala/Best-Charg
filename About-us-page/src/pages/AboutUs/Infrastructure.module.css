@@ -84,12 +84,10 @@
 
 .heroButtons {
   display: flex;
-  gap: var(--space-7);
-}
-
-.btn {
-  display: flex;
-  align-items: flex-end;
+  flex-direction: row;
+  align-items: stretch;
+  width: 100%;
+  gap: 12px;
 }
 
 /* responsiveness */
