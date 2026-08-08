@@ -98,15 +98,12 @@
   height: 40px;
   border-radius: 50%;
   background-color: var(--color-secondary);
-
   position: absolute;
   top: 20px;
   left: 20px;
-
   display: flex;
   align-items: center;
   justify-content: center;
-
   z-index: 1;
 }
 
@@ -232,14 +229,7 @@
 
 /* responsiveness */
 
-/* body {
-  overflow-x: hidden;
-} */
-
-/* ============================
-   MOBILE-FIRST BASE STYLES
-   (applies from 320px up, overridden by media queries below)
-============================ */
+/* 320px up */
 
 .strengthSection {
   width: 100%;
@@ -287,8 +277,6 @@
   line-height: 1.3;
   margin: 0;
 }
-
-/* slider wrapper — clips the track so only one card shows at a time */
 
 .sliderWrapper {
   width: 100%;
