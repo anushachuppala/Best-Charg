@@ -2,6 +2,9 @@ import { useState, useEffect, useCallback } from "react";
 
 import styles from "./OurStrength.module.css";
 import strengthImage from "../../assets/images/About-page/OurStrength.png";
+import ReliabilityImage from "../../assets/images/About-page/Reliability.jpg";
+import DesignedImage from "../../assets/images/About-page/Designed.png";
+import PartnershipImage from "../../assets/images/About-page/Partnership.jpg";
 import { Container, Panel, Section } from "../../shared/layout";
 import iterationIcon from "../../assets/images/About-page/Iteration.png";
 import technologyIcon from "../../assets/images/About-page/nanotechnology.png";
@@ -33,49 +36,73 @@ const slides = [
   },
 
   {
-    image: strengthImage,
-    title: "Reliable EV Infrastructure",
+    image: ReliabilityImage,
+    title: "Engineered for Reliability",
     description:
-      "Our solutions are built to deliver reliable charging infrastructure with seamless integration and long-term performance.",
+      "Every charger is designed for continuous operation with industrial-grade components, advanced protection systems, and high uptime in demanding environments.",
     features: [
       {
         icon: iterationIcon,
-        text: "Reliable Execution",
-        alt: "Execution",
+        text: "Industrial-Grade Build",
+        alt: "Build",
       },
       {
         icon: technologyIcon,
-        text: "Integrated Systems",
-        alt: "Systems",
+        text: "Intelligent Protection",
+        alt: "Protection",
       },
       {
         icon: arrowIcon,
-        text: "Built to Scale",
-        alt: "Scale",
+        text: "High Uptime",
+        alt: "Uptime",
       },
     ],
   },
 
   {
-    image: strengthImage,
-    title: "Technology Driven",
+    image: DesignedImage,
+    title: "Designed for India",
     description:
-      "We combine innovative technology and scalable infrastructure to create a seamless EV charging ecosystem.",
+      "Optimized for India's power infrastructure, climate, voltage fluctuations, and operational challenges to ensure dependable performance.",
     features: [
       {
         icon: iterationIcon,
-        text: "Innovation",
-        alt: "Innovation",
+        text: "Grid-Optimized Performance",
+        alt: "Performance",
       },
       {
         icon: technologyIcon,
-        text: "Technology",
-        alt: "Technology",
+        text: "Climate-Ready Engineering",
+        alt: "Engineering",
       },
       {
         icon: arrowIcon,
-        text: "Scalable Solutions",
-        alt: "Scalable solutions",
+        text: "Adapted for Local Needs",
+        alt: "Local Needs",
+      },
+    ],
+  },
+
+  {
+    image: PartnershipImage,
+    title: " Long-Term Partnership",
+    description:
+      "We don't simply deliver chargers—we become your long-term technology partner with dedicated support, upgrades, and future-ready innovations.",
+    features: [
+      {
+        icon: iterationIcon,
+        text: "Dedicated Customer Support",
+        alt: "Customer Support",
+      },
+      {
+        icon: technologyIcon,
+        text: "Continuous Innovation",
+        alt: "Innovation",
+      },
+      {
+        icon: arrowIcon,
+        text: "Lifecycle Services",
+        alt: "Services",
       },
     ],
   },
@@ -85,6 +112,7 @@ const loopSlides = [slides[slides.length - 1], ...slides, slides[0]];
 
 const OurStrength = () => {
   const [activeIndex, setActiveIndex] = useState(1);
+  const [enableTransition, setEnableTransition] = useState(true);
 
   console.log("active state:", activeIndex);
 
@@ -102,17 +130,28 @@ const OurStrength = () => {
   useEffect(() => {
     if (activeIndex === loopSlides.length - 1) {
       setTimeout(() => {
+        setEnableTransition(false);
         setActiveIndex(1);
       }, 600);
     }
 
     if (activeIndex === 0) {
       setTimeout(() => {
+        setEnableTransition(false);
         setActiveIndex(slides.length);
       }, 600);
     }
   }, [activeIndex]);
 
+  useEffect(() => {
+    if (!enableTransition) {
+      requestAnimationFrame(() => {
+        requestAnimationFrame(() => {
+          setEnableTransition(true);
+        });
+      });
+    }
+  }, [enableTransition]);
   // Autoplay
   // useEffect(() => {
   //   const timer = setInterval(() => {
@@ -144,6 +183,7 @@ const OurStrength = () => {
                 className={styles.sliderTrack}
                 style={{
                   transform: `translateX(-${activeIndex * 100}%)`,
+                  transition: enableTransition ? "transform 0.6s ease" : "none",
                 }}
               >
                 {loopSlides.map((slide, index) => (

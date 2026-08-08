@@ -27,15 +27,18 @@
   display: block;
   object-fit: cover;
 }
+
 .heading,
 .title {
+  font-size: 36px;
+
   gap: var(--space-5);
   /* font-weight: 700; */
 }
 
-.title {
+h2.title {
   font-size: 36px;
-  font-weight: 500;
+  gap: var(--space-5);
 }
 
 /* CONTENT */
