@@ -1,6 +1,8 @@
 import { useState, useEffect, useCallback } from "react";
 
 import styles from "./OurStrength.module.css";
+import leftArrow from "../../assets/images/About-page/PreviousSlide.png";
+import rightArrow from "../../assets/images/About-page/nextSlide.png";
 import strengthImage from "../../assets/images/About-page/OurStrength.png";
 import ReliabilityImage from "../../assets/images/About-page/Reliability.jpg";
 import DesignedImage from "../../assets/images/About-page/Designed.png";
@@ -152,7 +154,8 @@ const OurStrength = () => {
       });
     }
   }, [enableTransition]);
-  // Autoplay
+
+  // Autoplay{
   // useEffect(() => {
   //   const timer = setInterval(() => {
   //     nextSlide();

@@ -187,7 +187,7 @@ const FooterSection = () => {
                 />
               </a>
 
-              <a href="www.youtube.com">
+              <a href="https://www.youtube.com/@Best_Charg">
                 <img
                   src={YoutubeIcon}
                   alt="YouTube"

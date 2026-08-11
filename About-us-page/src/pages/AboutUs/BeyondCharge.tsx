@@ -8,9 +8,9 @@ const BeyondCharge = () => {
     <Section>
       <Container>
         <Panel>
-          <div className="page-row">
+          <div className="page-row align-items-center">
             <div className={`page-col-12 page-col-lg-6 ${styles.content}`}>
-              <p className={` 16-secondary ${styles.eyebrow}`}>
+              <p className={`16-secondary ${styles.eyebrow}`}>
                 BEYOND CHARGING
               </p>
 
@@ -20,7 +20,7 @@ const BeyondCharge = () => {
                 Building Destinations.
               </h2>
 
-              <p className={` 18-neutral ${styles.description}`}>
+              <p className={`18-neutral ${styles.description}`}>
                 Best Hub transforms EV charging stations into vibrant
                 destinations by combining fast charging with retail, dining,
                 smart parking, digital services, and community spaces creating
@@ -29,6 +29,7 @@ const BeyondCharge = () => {
 
               <Button text="Explore Best Hub" variant="primary" />
             </div>
+
             <div className="page-col-12 page-col-lg-6">
               <img
                 src={BeyondImage}
