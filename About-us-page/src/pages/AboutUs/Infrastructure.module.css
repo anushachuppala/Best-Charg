@@ -85,14 +85,14 @@
 .heroButtons {
   display: flex;
   flex-direction: row;
+  overflow: hidden;
   align-items: stretch;
   width: 100%;
   gap: 12px;
 }
 
-/* responsiveness */
+/* 769px - 1024px */
 
-/* Tablet Responsive */
 @media (max-width: 1024px) {
   .Container {
     grid-template-columns: 1fr;
@@ -123,17 +123,23 @@
 
   .heroButtons {
     display: flex;
+    flex-direction: row;
     align-items: center;
     justify-content: center;
+    width: 392px;
+    gap: 12px;
   }
 
   .heroButtons button {
     width: 190px;
     min-width: 190px;
+    flex: 0 0 190px;
+    box-sizing: border-box;
   }
 }
 
-/* Mobile Responsive */
+/* 481px - 768px */
+
 @media (max-width: 768px) {
   .InfrastructureSection {
     min-height: auto;
@@ -180,18 +186,21 @@
   .heroButtons {
     display: flex;
     flex-direction: column;
-    width: 100%;
     align-items: center;
+    width: 280px;
     gap: var(--space-2);
   }
 
   .heroButtons button {
-    width: 190px;
-    min-width: 190px;
+    width: 100%;
+    min-width: 0;
+    flex: 0 0 auto;
+    box-sizing: border-box;
   }
 }
 
-/* Small Mobile */
+/* 320px - 480px */
+
 @media (max-width: 480px) {
   .Container {
     padding-inline: 16px;
@@ -210,15 +219,17 @@
   }
 
   .heroButtons {
-    flex-direction: row;
-    flex-wrap: wrap;
+    display: flex;
+    flex-direction: column;
     align-items: center;
-    width: auto;
-    gap: 24px;
+    width: 260px;
+    gap: 12px;
   }
 
   .heroButtons button {
-    width: 190px;
-    min-width: 190px;
+    width: 100%;
+    min-width: 0;
+    flex: 0 0 auto;
+    box-sizing: border-box;
   }
 }
