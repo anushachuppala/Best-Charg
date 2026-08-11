@@ -126,6 +126,11 @@
     align-items: center;
     justify-content: center;
   }
+
+  .heroButtons button {
+    width: 190px;
+    min-width: 190px;
+  }
 }
 
 /* Mobile Responsive */
@@ -179,6 +184,11 @@
     align-items: center;
     gap: var(--space-2);
   }
+
+  .heroButtons button {
+    width: 190px;
+    min-width: 190px;
+  }
 }
 
 /* Small Mobile */
@@ -200,12 +210,15 @@
   }
 
   .heroButtons {
-    display: flex;
-    width: 100%;
     flex-direction: row;
-    align-items: center;
-    justify-content: center;
     flex-wrap: wrap;
-    gap: var(--space-2);
+    align-items: center;
+    width: auto;
+    gap: 24px;
+  }
+
+  .heroButtons button {
+    width: 190px;
+    min-width: 190px;
   }
 }

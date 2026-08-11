@@ -21,16 +21,12 @@
   width: 100%;
 }
 
-/* main footer */
-
 .footerMain {
   width: 100%;
   display: flex;
   flex-direction: column;
   row-gap: clamp(24px, 5vw, 32px);
 }
-
-/* contact card */
 
 .contentCard {
   position: relative;
@@ -117,14 +113,12 @@
   right: -2%;
   top: -14%;
   width: 44%;
-  height: auto;
+  height: 370px;
   max-width: 200px;
   object-fit: contain;
   z-index: 4;
   pointer-events: none;
 }
-
-/* footer right */
 
 .footerRight {
   display: flex;
@@ -166,6 +160,7 @@
   object-fit: contain;
 }
 
+/* Solutions + Products ALWAYS side by side; newsletter wraps to its own row */
 .mainColumn {
   width: 100%;
   display: grid;
@@ -184,7 +179,7 @@
 }
 
 .newsletter {
-  grid-column: 1 / -1;
+  grid-column: 1 / -1; /* full width, own row, under Solutions/Products */
   padding-left: 0;
 }
 
@@ -270,7 +265,10 @@
   opacity: 0.9;
 }
 
-/* divider */
+/* ============================================= */
+/* DIVIDER */
+/* ============================================= */
+
 .divider {
   width: 100%;
   height: 1px;
@@ -278,7 +276,9 @@
   margin-top: clamp(16px, 3vw, 20px);
 }
 
-/* bottom footer */
+/* ============================================= */
+/* BOTTOM FOOTER */
+/* ============================================= */
 
 .footerBottom {
   width: 100%;
@@ -327,7 +327,10 @@
   object-fit: contain;
 }
 
-/* 481px – 768px   */
+/* ============================================= */
+/* 481px – 768px: minor breathing room only        */
+/* (layout is already fluid/correct from mobile)   */
+/* ============================================= */
 
 @media (min-width: 481px) and (max-width: 768px) {
   .footerBottom {
@@ -340,7 +343,9 @@
   }
 }
 
-/* 769px – 1024px */
+/* ============================================= */
+/* 769px – 1024px: card + content side by side     */
+/* ============================================= */
 
 @media (min-width: 769px) and (max-width: 1024px) {
   .footerMain {
@@ -378,7 +383,9 @@
   }
 }
 
-/* 1025px + */
+/* ============================================= */
+/* 1025px+: original desktop design                */
+/* ============================================= */
 
 @media (min-width: 1025px) {
   .footerContainer {
@@ -458,7 +465,7 @@
   }
 
   .newsletter {
-    grid-column: auto;
+    grid-column: auto; /* back to sitting in row 3, not spanning */
     padding-left: 2px;
   }
 
