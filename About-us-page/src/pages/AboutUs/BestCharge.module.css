@@ -208,7 +208,7 @@
 
 @media (min-width: 1025px) {
   .bestChargeSection {
-    padding: 60px 0; /* top space restored — was 0 top in the original */
+    padding: 60px 0;
   }
 
   .bestChargeContainer {
