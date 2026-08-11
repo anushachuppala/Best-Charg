@@ -10,7 +10,7 @@
   background: #163b7c;
   display: flex;
   flex-direction: column;
-  padding: clamp(20px, 5vw, 32px) clamp(16px, 4vw, 32px) 0;
+  padding: 20px 16px 0;
 }
 
 .footerContainer > div {
@@ -21,20 +21,27 @@
   width: 100%;
 }
 
+/* ============================
+   MAIN FOOTER LAYOUT (mobile-first: stacked)
+   ============================ */
 .footerMain {
   width: 100%;
   display: flex;
   flex-direction: column;
-  row-gap: clamp(24px, 5vw, 32px);
+  row-gap: 24px;
 }
 
+/* ============================
+   CONTACT CARD
+   ============================ */
 .contentCard {
   position: relative;
   width: 100%;
-  max-width: 416px;
+  max-width: 380px;
   aspect-ratio: 416 / 294;
   margin: 0 auto;
   border-radius: 8px;
+  overflow: hidden; /* keeps charger image from ever causing overflow */
 }
 
 .rectangleImage {
@@ -51,15 +58,16 @@
 .cardContent {
   position: absolute;
   top: 6%;
-  left: 4%;
+  left: 5%;
   z-index: 3;
-  width: min(250px, 58%);
+  width: 60%;
+  max-width: 250px;
 }
 
 .title {
   color: #163b7c;
-  margin-bottom: clamp(6px, 1.5vw, 10px);
-  font-size: clamp(18px, 4.5vw, 30px);
+  margin-bottom: 6px;
+  font-size: clamp(16px, 5vw, 30px);
   font-weight: 700;
   line-height: 1.15;
 }
@@ -67,19 +75,19 @@
 .contentWrapper {
   display: flex;
   flex-direction: column;
-  gap: clamp(5px, 1.2vw, 9px);
+  gap: 5px;
 }
 
 .contentItem {
   display: grid;
-  grid-template-columns: clamp(14px, 3vw, 20px) 1fr;
-  column-gap: clamp(5px, 1.5vw, 8px);
+  grid-template-columns: 16px 1fr;
+  column-gap: 6px;
   align-items: start;
 }
 
 .icon {
   width: 100%;
-  max-width: 17px;
+  max-width: 15px;
   height: auto;
   object-fit: contain;
   margin-top: 2px;
@@ -93,7 +101,7 @@
 
 .contentInfo span {
   color: #444;
-  font-size: clamp(11px, 2.6vw, 18px);
+  font-size: clamp(10px, 2.8vw, 18px);
   line-height: 1.2;
   font-weight: 500;
   margin-bottom: 2px;
@@ -102,28 +110,33 @@
 .contentInfo p {
   margin: 0;
   color: #555;
-  font-size: clamp(9px, 2vw, 12px);
+  font-size: clamp(8px, 2.2vw, 12px);
   line-height: 1.35;
   font-weight: 400;
   word-break: break-word;
 }
 
+/* Charger image: percentage-based, capped, always inside the card */
 .charger {
   position: absolute;
-  right: -2%;
-  top: -14%;
-  width: 44%;
-  height: 370px;
-  max-width: 200px;
+  right: 0;
+  top: -8%;
+  width: 40%;
+  max-width: 160px;
+  height: auto;
+  aspect-ratio: 1 / 1.85;
   object-fit: contain;
   z-index: 4;
   pointer-events: none;
 }
 
+/* ============================
+   RIGHT SIDE (logos + links + newsletter)
+   ============================ */
 .footerRight {
   display: flex;
   flex-direction: column;
-  gap: clamp(20px, 4vw, 30px);
+  gap: 20px;
   width: 100%;
   min-width: 0;
 }
@@ -137,34 +150,35 @@
   flex-wrap: wrap;
   align-items: center;
   justify-content: center;
-  gap: clamp(10px, 3vw, 18px);
+  gap: 12px;
 }
 
 .bestChargLogo {
-  width: clamp(140px, 40vw, 300px);
+  width: clamp(120px, 40vw, 300px);
   height: auto;
   max-height: 60px;
   object-fit: contain;
 }
 
 .handshakeLogo {
-  width: clamp(24px, 6vw, 36px);
-  height: clamp(24px, 6vw, 36px);
+  width: clamp(22px, 6vw, 36px);
+  height: clamp(22px, 6vw, 36px);
   object-fit: contain;
 }
 
 .truePowerLogo {
-  width: clamp(120px, 35vw, 237px);
+  width: clamp(100px, 35vw, 237px);
   height: auto;
   max-height: 63px;
   object-fit: contain;
 }
 
+/* Mobile: single column stack for all link groups */
 .mainColumn {
   width: 100%;
   display: grid;
-  grid-template-columns: repeat(2, minmax(0, 1fr));
-  gap: clamp(12px, 3vw, 20px);
+  grid-template-columns: 1fr;
+  gap: 20px;
   text-align: left;
 }
 
@@ -178,16 +192,16 @@
 }
 
 .newsletter {
-  grid-column: 1 / -1; /* full width, own row, under Solutions/Products */
+  grid-column: 1 / -1;
   padding-left: 0;
 }
 
 .footerColumn h4,
 .footerColumnTwo h4,
 .newsletter h4 {
-  margin: 0 0 clamp(8px, 2vw, 12px) 0;
+  margin: 0 0 10px 0;
   color: #ffffff;
-  font-size: clamp(14px, 3.2vw, 18px);
+  font-size: clamp(14px, 3.5vw, 18px);
   line-height: 1.2;
   font-weight: 700;
 }
@@ -196,7 +210,7 @@
 .footerColumnTwo a {
   color: #ffffff;
   text-decoration: none;
-  font-size: clamp(12px, 2.6vw, 14px);
+  font-size: clamp(12px, 2.8vw, 14px);
   line-height: 1.4;
   margin-bottom: 8px;
   font-weight: 500;
@@ -213,7 +227,7 @@
   height: auto;
   margin: 0 0 13px 0;
   color: #ffffff;
-  font-size: clamp(12px, 2.6vw, 14px);
+  font-size: clamp(12px, 2.8vw, 14px);
   line-height: 1.35;
   font-weight: 400;
 }
@@ -228,16 +242,16 @@
 }
 
 .subscribeBox input {
-  flex: 1 1 180px;
+  flex: 1 1 160px;
   min-width: 0;
-  height: 40px;
+  height: 42px;
   border: none;
   outline: none;
   border-radius: 8px;
   padding: 0 14px;
   background-color: #ffffff;
   color: #333;
-  font-size: clamp(13px, 2.4vw, 15px);
+  font-size: clamp(13px, 2.6vw, 15px);
   font-weight: 500;
 }
 
@@ -247,8 +261,8 @@
 }
 
 .subscribeBox button {
-  flex: 1 1 140px;
-  height: 40px;
+  flex: 1 1 120px;
+  height: 42px;
   border: none;
   outline: none;
   border-radius: 8px;
@@ -268,17 +282,17 @@
   width: 100%;
   height: 1px;
   background-color: rgba(255, 255, 255, 0.5);
-  margin-top: clamp(16px, 3vw, 20px);
+  margin-top: 16px;
 }
 
 .footerBottom {
   width: 100%;
   display: flex;
-  flex-wrap: wrap;
+  flex-direction: column;
   align-items: center;
   justify-content: center;
-  gap: clamp(10px, 3vw, 16px);
-  padding: clamp(14px, 3vw, 20px) 0;
+  gap: 12px;
+  padding: 16px 0;
   text-align: center;
 }
 
@@ -286,14 +300,14 @@
   display: flex;
   flex-wrap: wrap;
   align-items: center;
-  justify-content: flex-start;
-  gap: clamp(10px, 2.5vw, 17px);
+  justify-content: center;
+  gap: 10px 16px;
 }
 
 .legalLinks a {
   color: #ffffff;
   text-decoration: none;
-  font-size: clamp(11px, 2.4vw, 14px);
+  font-size: clamp(11px, 2.6vw, 14px);
   line-height: 1;
   font-weight: 600;
 }
@@ -306,27 +320,35 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  gap: clamp(10px, 2.5vw, 15px);
+  gap: 12px;
 }
 
 .LinkedIn,
 .Facebook,
 .Instagram,
 .Youtube {
-  width: clamp(30px, 6vw, 42px);
-  height: clamp(30px, 6vw, 42px);
+  width: clamp(28px, 6vw, 42px);
+  height: clamp(28px, 6vw, 42px);
   object-fit: contain;
 }
 
-/* ============================================= */
-/* 481px – 768px: minor breathing room only        */
-/* (layout is already fluid/correct from mobile)   */
-/* ============================================= */
+/* 481px – 768px  */
+@media (min-width: 481px) {
+  .footerContainer {
+    padding: 24px 24px 0;
+  }
 
-@media (min-width: 481px) and (max-width: 768px) {
+  .contentCard {
+    max-width: 416px;
+  }
+
+  .mainColumn {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
   .footerBottom {
+    flex-direction: row;
     justify-content: space-between;
-    text-align: left;
   }
 
   .legalLinks {
@@ -334,26 +356,25 @@
   }
 }
 
-/* ============================================= */
-/* 769px – 1024px: card + content side by side     */
-/* ============================================= */
+/* 769px – 1024px  */
+@media (min-width: 769px) {
+  .footerContainer {
+    padding: 28px 28px 0;
+  }
 
-@media (min-width: 769px) and (max-width: 1024px) {
   .footerMain {
     flex-direction: row;
     align-items: flex-start;
-    column-gap: clamp(20px, 3vw, 34px);
+    column-gap: 32px;
   }
 
   .contentCard {
-    width: clamp(260px, 34vw, 380px);
-    flex-shrink: 0;
+    flex: 0 0 380px;
     margin: 0;
   }
 
   .footerRight {
-    flex: 1;
-    min-width: 0;
+    flex: 1 1 auto;
   }
 
   .logos {
@@ -361,163 +382,26 @@
   }
 
   .mainColumn {
-    width: 100%;
-  }
-
-  .footerBottom {
-    justify-content: space-between;
-    text-align: left;
-  }
-
-  .legalLinks {
-    justify-content: flex-start;
-  }
-}
-
-/* ============================================= */
-/* 1025px+: original desktop design                */
-/* ============================================= */
-
-@media (min-width: 1025px) {
-  .footerContainer {
-    min-height: 410px;
-    padding: 32px 0 0;
-  }
-
-  .footerMain {
-    display: grid;
-    grid-template-columns: 416px 1fr;
-    column-gap: 34px;
-    align-items: start;
-  }
-
-  .contentCard {
-    width: 416px;
-    max-width: 416px;
-    aspect-ratio: unset;
-    height: 267px;
-    overflow: visible;
-    margin: 0;
-  }
-
-  .rectangleImage {
-    height: 294px;
-  }
-
-  .cardContent {
-    top: 17px;
-    left: 15px;
-    width: 250px;
-  }
-
-  .title {
-    font-size: 30px;
-  }
-
-  .contentInfo span {
-    font-size: 18px;
-  }
-
-  .charger {
-    right: -15px;
-    top: -41px;
-    width: 200px;
-    max-width: none;
-  }
-
-  .footerRight {
-    padding-top: 4px;
-  }
-
-  .logos {
-    justify-content: flex-start;
-    height: 55px;
-  }
-
-  .bestChargLogo {
-    width: 300px;
-    max-height: none;
-  }
-
-  .handshakeLogo {
-    width: 36px;
-    height: 36px;
-  }
-
-  .truePowerLogo {
-    width: 237px;
-    max-height: none;
-  }
-
-  .mainColumn {
-    width: 60%;
-    grid-template-columns: repeat(3, minmax(0, 1fr));
-    gap: 10px;
+    grid-template-columns: 1fr 1fr 1.4fr;
+    gap: 24px;
   }
 
   .newsletter {
-    grid-column: auto; /* back to sitting in row 3, not spanning */
-    padding-left: 2px;
+    grid-column: auto;
+  }
+}
+
+@media (min-width: 1025px) {
+  .footerContainer {
+    padding: 32px 32px 0;
   }
 
-  .newsletter p {
-    width: 500px;
-    height: 38px;
+  .contentCard {
+    flex: 0 0 416px;
   }
 
-  .subscribeBox {
-    max-width: none;
-    display: grid;
-    grid-template-columns: minmax(150px, 1fr) 112px;
-    column-gap: 150px;
-    flex-wrap: nowrap;
-  }
-
-  .subscribeBox input {
-    width: 280px;
-    flex: unset;
-    height: 40px;
-  }
-
-  .subscribeBox button {
-    width: 180px;
-    flex: unset;
-    height: 40px;
-    font-size: 18px;
-    font-weight: 300;
-  }
-
-  .divider {
-    margin-top: 20px;
-  }
-
-  .footerBottom {
-    display: grid;
-    grid-template-columns: 1fr auto;
-    flex-wrap: nowrap;
-    padding: 15px 0 20px;
-    text-align: left;
-  }
-
-  .legalLinks {
-    gap: 17px;
-  }
-
-  .legalLinks a {
-    font-size: 14px;
-  }
-
-  .socialIcons {
-    width: 204px;
-    height: 42px;
-    justify-content: flex-start;
-  }
-
-  .LinkedIn,
-  .Facebook,
-  .Instagram,
-  .Youtube {
-    width: 42px;
-    height: 42px;
+  .mainColumn {
+    grid-template-columns: 1fr 1fr 1.6fr;
+    gap: 20px;
   }
 }
