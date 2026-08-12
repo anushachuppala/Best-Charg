@@ -21,9 +21,6 @@
   width: 100%;
 }
 
-/* ============================
-   MAIN FOOTER LAYOUT (mobile-first: stacked)
-   ============================ */
 .footerMain {
   width: 100%;
   display: flex;
@@ -31,9 +28,6 @@
   row-gap: 24px;
 }
 
-/* ============================
-   CONTACT CARD
-   ============================ */
 .contentCard {
   position: relative;
   width: 100%;
@@ -41,7 +35,7 @@
   aspect-ratio: 416 / 294;
   margin: 0 auto;
   border-radius: 8px;
-  overflow: hidden; /* keeps charger image from ever causing overflow */
+  overflow: hidden;
 }
 
 .rectangleImage {
@@ -116,7 +110,6 @@
   word-break: break-word;
 }
 
-/* Charger image: percentage-based, capped, always inside the card */
 .charger {
   position: absolute;
   right: 0;
@@ -130,9 +123,6 @@
   pointer-events: none;
 }
 
-/* ============================
-   RIGHT SIDE (logos + links + newsletter)
-   ============================ */
 .footerRight {
   display: flex;
   flex-direction: column;
@@ -173,11 +163,10 @@
   object-fit: contain;
 }
 
-/* Mobile: single column stack for all link groups */
 .mainColumn {
   width: 100%;
   display: grid;
-  grid-template-columns: 1fr;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
   gap: 20px;
   text-align: left;
 }
@@ -232,27 +221,35 @@
   font-weight: 400;
 }
 
+/* Subscribe box - default is COLUMN */
 .subscribeBox {
   width: 100%;
-  max-width: 450px;
+  max-width: 460px;
+  min-width: 0;
   display: flex;
-  flex-wrap: wrap;
+  flex-direction: column;
+  flex-wrap: nowrap;
   gap: 10px;
-  align-items: center;
+  align-items: stretch;
 }
 
-.subscribeBox input {
-  flex: 1 1 160px;
-  min-width: 0;
-  height: 42px;
+.subscribeBox input,
+.subscribeBox button {
+  height: 44px;
   border: none;
   outline: none;
   border-radius: 8px;
+  font-size: 14px;
+  font-weight: 500;
+  box-sizing: border-box;
+}
+
+.subscribeBox input {
+  width: 100%;
+  min-width: 0;
   padding: 0 14px;
   background-color: #ffffff;
   color: #333;
-  font-size: clamp(13px, 2.6vw, 15px);
-  font-weight: 500;
 }
 
 .subscribeBox input::placeholder {
@@ -261,16 +258,14 @@
 }
 
 .subscribeBox button {
-  flex: 1 1 120px;
-  height: 42px;
-  border: none;
-  outline: none;
-  border-radius: 8px;
+  width: 100%;
+  min-width: 0;
+  white-space: nowrap;
   background-color: #55b56c;
   color: #ffffff;
-  font-size: clamp(14px, 2.8vw, 18px);
+  font-size: 15px;
   font-weight: 400;
-  padding: 0 14px;
+  padding: 0 22px;
   cursor: pointer;
 }
 
@@ -279,7 +274,7 @@
 }
 
 .divider {
-  width: 100%;
+  width: calc(100% + 50px);
   height: 1px;
   background-color: rgba(255, 255, 255, 0.5);
   margin-top: 16px;
@@ -332,7 +327,6 @@
   object-fit: contain;
 }
 
-/* 481px – 768px  */
 @media (min-width: 481px) {
   .footerContainer {
     padding: 24px 24px 0;
@@ -346,6 +340,16 @@
     grid-template-columns: repeat(2, minmax(0, 1fr));
   }
 
+  .subscribeBox {
+    flex-direction: column !important;
+  }
+
+  .subscribeBox input,
+  .subscribeBox button {
+    width: 100%;
+    flex: none;
+  }
+
   .footerBottom {
     flex-direction: row;
     justify-content: space-between;
@@ -356,52 +360,233 @@
   }
 }
 
-/* 769px – 1024px  */
-@media (min-width: 769px) {
+@media (min-width: 769px) and (max-width: 1024px) {
   .footerContainer {
     padding: 28px 28px 0;
   }
 
   .footerMain {
-    flex-direction: row;
-    align-items: flex-start;
-    column-gap: 32px;
+    flex-direction: column;
+    row-gap: 28px;
+    column-gap: 0;
+    align-items: stretch;
   }
 
   .contentCard {
-    flex: 0 0 380px;
-    margin: 0;
+    width: 100%;
+    max-width: 416px;
+    flex: none;
+    margin: 0 auto;
   }
 
   .footerRight {
-    flex: 1 1 auto;
+    width: 100%;
+    flex: none;
+    min-width: 0;
+    gap: 24px;
   }
 
   .logos {
-    justify-content: flex-start;
+    width: 100%;
+    justify-content: center;
+  }
+
+  .bestChargLogo {
+    width: clamp(150px, 30vw, 240px);
+  }
+
+  .truePowerLogo {
+    width: clamp(120px, 25vw, 200px);
+  }
+
+  .handshakeLogo {
+    width: clamp(24px, 4vw, 36px);
+    height: clamp(24px, 4vw, 36px);
   }
 
   .mainColumn {
-    grid-template-columns: 1fr 1fr 1.4fr;
+    width: 100%;
+    grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+    gap: 28px 24px;
+  }
+
+  .newsletter {
+    grid-column: 1 / -1;
+  }
+
+  .newsletter p {
+    max-width: 600px;
+  }
+
+  .subscribeBox {
+    width: 100%;
+    max-width: 500px;
+    flex-direction: column !important;
+    flex-wrap: nowrap;
+    align-items: stretch;
+  }
+
+  .subscribeBox input,
+  .subscribeBox button {
+    width: 100% !important;
+    flex: none !important;
+  }
+
+  .footerBottom {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .legalLinks {
+    justify-content: flex-start;
+  }
+
+  .socialIcons {
+    justify-content: flex-end;
+  }
+}
+
+@media (min-width: 851px) and (max-width: 1024px) {
+  .footerMain {
+    row-gap: 32px;
+  }
+
+  .mainColumn {
+    grid-template-columns: 1fr 1fr 1.5fr;
     gap: 24px;
   }
 
   .newsletter {
     grid-column: auto;
   }
+
+  .subscribeBox {
+    max-width: 100%;
+    flex-direction: column !important;
+    flex-wrap: nowrap;
+    align-items: stretch;
+    gap: 10px;
+  }
+
+  .subscribeBox input,
+  .subscribeBox button {
+    width: 100% !important;
+    flex: none !important;
+  }
 }
 
 @media (min-width: 1025px) {
   .footerContainer {
-    padding: 32px 32px 0;
+    padding: 40px 48px 0;
+  }
+
+  .footerMain {
+    flex-direction: row;
+    align-items: flex-start;
+    column-gap: 48px;
+    row-gap: 0;
   }
 
   .contentCard {
+    width: 100%;
+    max-width: 416px;
     flex: 0 0 416px;
+    margin: 0;
+  }
+
+  .footerRight {
+    flex: 1;
+    min-width: 0;
+    gap: 28px;
+  }
+
+  .logos {
+    justify-content: flex-start;
+    gap: 24px;
+  }
+
+  .bestChargLogo {
+    width: clamp(140px, 14vw, 190px);
+    max-height: 40px;
+  }
+
+  .handshakeLogo {
+    width: 22px;
+    height: 22px;
+  }
+
+  .truePowerLogo {
+    width: clamp(110px, 12vw, 150px);
+    max-height: 40px;
   }
 
   .mainColumn {
     grid-template-columns: 1fr 1fr 1.6fr;
-    gap: 20px;
+    gap: 32px;
+  }
+
+  .newsletter {
+    grid-column: auto;
+  }
+
+  .newsletter p {
+    max-width: 320px;
+  }
+
+  /* DESKTOP ONLY = ROW */
+  .subscribeBox {
+    max-width: 800px;
+    flex-direction: row !important;
+    flex-wrap: nowrap;
+    align-items: stretch;
+    gap: 10px;
+  }
+
+  .subscribeBox input,
+  .subscribeBox button {
+    flex: 1 1 0;
+    width: auto !important;
+    min-width: fit-content;
+  }
+
+  .footerBottom {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 0;
+  }
+
+  .legalLinks {
+    justify-content: flex-start;
+    gap: 24px;
+  }
+
+  .socialIcons {
+    justify-content: flex-end;
+  }
+}
+
+@media (max-width: 1024px) {
+  .subscribeBox {
+    flex-direction: column !important;
+  }
+
+  .subscribeBox input,
+  .subscribeBox button {
+    width: 100% !important;
+    flex: none !important;
+  }
+}
+
+@media (min-width: 1025px) {
+  .subscribeBox {
+    flex-direction: row !important;
+  }
+
+  .subscribeBox input,
+  .subscribeBox button {
+    width: auto !important;
+    flex: 1 1 0;
   }
 }

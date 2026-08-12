@@ -230,25 +230,25 @@ const OurStrength = () => {
               </div>
             </div>
 
-            {/* Left Arrow */}
+            <div className={styles.controls}>
+              <button
+                className={`${styles.arrow} ${styles.leftArrow}`}
+                onClick={previousSlide}
+                aria-label="Previous slide"
+              >
+                ‹
+              </button>
 
-            <button
-              className={`${styles.arrow} ${styles.leftArrow}`}
-              onClick={previousSlide}
-              aria-label="Previous slide"
-            >
-              ‹
-            </button>
+              {/* Right Arrow */}
 
-            {/* Right Arrow */}
-
-            <button
-              className={`${styles.arrow} ${styles.rightArrow}`}
-              onClick={nextSlide}
-              aria-label="Next slide"
-            >
-              ›
-            </button>
+              <button
+                className={`${styles.arrow} ${styles.rightArrow}`}
+                onClick={nextSlide}
+                aria-label="Next slide"
+              >
+                ›
+              </button>
+            </div>
 
             {/* Dots */}
 
