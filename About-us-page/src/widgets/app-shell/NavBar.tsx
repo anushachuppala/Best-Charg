@@ -1,7 +1,7 @@
 import styles from "./NavBar.module.css";
 import logo from "../assets/images/logo.png";
 import { IoChevronDown, IoMenu, IoClose } from "react-icons/io5";
-import Button from "../shared/ui/Button";
+import Button from "../../shared/ui/Button";
 import { useState } from "react";
 
 function NavBar() {

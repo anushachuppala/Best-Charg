@@ -113,7 +113,7 @@
   font-weight: 700;
   margin: 0;
   padding: 0;
-  top: -30px;
+  top: -40px;
   left: 10px;
   position: relative;
   z-index: 2;
@@ -159,8 +159,6 @@
   width: 24px;
   height: 24px;
 }
-
-/* controls (arrow row) */
 
 .controls {
   position: relative;
@@ -673,8 +671,8 @@
     position: relative;
     z-index: 2;
     margin: 0;
-    left: 15px;
-    top: -25px;
+    left: 15px !important;
+    top: -25px !important;
   }
 
   .arrow {

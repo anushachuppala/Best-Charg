@@ -5,7 +5,7 @@
   overflow: hidden;
   display: flex;
   align-items: center;
-  padding: calc(var(--navbar-height, 64px) + 40px) 0 60px;
+  /* padding: calc(var(--navbar-height, 64px) + 40px) 0 60px; */
   box-sizing: border-box;
 }
 
@@ -53,7 +53,6 @@
   width: 100%;
   max-width: 100%;
   text-align: left;
-  margin-top: 50px;
 }
 
 /* small heading */

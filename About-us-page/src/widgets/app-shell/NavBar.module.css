@@ -1,7 +1,7 @@
 .navbar {
   box-sizing: border-box;
   width: 100%;
-  height: var(--navbar-height);
+  height: 10%;
   padding: 0 16px;
   display: flex;
   align-items: center;
@@ -74,6 +74,7 @@
   font-size: 17px;
   font-weight: 400;
   color: #555555;
+
   cursor: pointer;
 }
 

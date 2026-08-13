@@ -221,7 +221,6 @@
   font-weight: 400;
 }
 
-/* Subscribe box - default is COLUMN */
 .subscribeBox {
   width: 100%;
   max-width: 460px;
@@ -477,10 +476,6 @@
 }
 
 @media (min-width: 1025px) {
-  .footerContainer {
-    padding: 40px 48px 0;
-  }
-
   .footerMain {
     flex-direction: row;
     align-items: flex-start;
@@ -534,7 +529,6 @@
     max-width: 320px;
   }
 
-  /* DESKTOP ONLY = ROW */
   .subscribeBox {
     max-width: 800px;
     flex-direction: row !important;
