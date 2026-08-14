@@ -1,9 +1,35 @@
 import { createBrowserRouter } from "react-router-dom";
+import { AppShell } from "../../widgets/app-shell/AppShell.tsx";
 import About from "../../pages/AboutUs/AboutPage";
+import ProductsPage from "../../pages/AboutUs/ProductsPage.tsx";
+import SolutionsPage from "../../pages/AboutUs/SolutionsPage.tsx";
+import BestHubPage from "../../pages/AboutUs/BestHubPage.tsx";
+import BlogPage from "../../pages/AboutUs/BlogPage.tsx";
 
 export const router = createBrowserRouter([
   {
-    path: "/",
-    element: <About />,
+    element: <AppShell />,
+    children: [
+      {
+        path: "/",
+        element: <About />,
+      },
+      {
+        path: "/products",
+        element: <ProductsPage />,
+      },
+      {
+        path: "/solutions",
+        element: <SolutionsPage />,
+      },
+      {
+        path: "/besthub",
+        element: <BestHubPage />,
+      },
+      {
+        path: "/blog",
+        element: <BlogPage />,
+      },
+    ],
   },
 ]);

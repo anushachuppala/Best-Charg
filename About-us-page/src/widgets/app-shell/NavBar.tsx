@@ -1,8 +1,10 @@
 import styles from "./NavBar.module.css";
-import logo from "../assets/images/logo.png";
+import logo from "../../assets/images/logo.png";
 import { IoChevronDown, IoMenu, IoClose } from "react-icons/io5";
 import Button from "../../shared/ui/Button";
 import { useState } from "react";
+
+import { Link } from "react-router-dom";
 
 function NavBar() {
   const [menuOpen, setMenuOpen] = useState(false);
@@ -36,13 +38,22 @@ function NavBar() {
             className={`${styles.navlinks} ${menuOpen ? styles.navlinksOpen : ""}`}
           >
             <li className={styles.productsMenu}>
-              Products
+              <Link to="/products">Products</Link>
               <IoChevronDown className={styles.icon} />
             </li>
 
-            <li>Solutions</li>
-            <li>Best Hub</li>
-            <li>Blog</li>
+            <li>
+              <Link to="/solutions">Solutions</Link>
+            </li>
+
+            <li>
+              <Link to="/besthub">Best Hub</Link>
+            </li>
+
+            <li>
+              <Link to="/blog">Blog</Link>
+            </li>
+
             <li className={styles.active}>About us</li>
 
             <li className={styles.mobileButton}>
