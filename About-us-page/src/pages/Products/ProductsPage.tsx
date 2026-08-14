@@ -1,8 +1,8 @@
 const ProductsPage = () => {
   return (
     <main>
-      <h1>Products</h1>
-      <p>This is the Products page.</p>
+      <h1>Solutions</h1>
+      <p>This is the Solutions page.</p>
     </main>
   );
 };
