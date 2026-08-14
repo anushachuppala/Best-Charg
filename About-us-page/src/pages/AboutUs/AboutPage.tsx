@@ -6,7 +6,6 @@ import BeyondCharge from "./BeyondCharge";
 import PartnerCards from "./PartnerCards";
 import FounderMsg from "./FounderMsg";
 import Infrastructure from "./Infrastructure";
-import FooterSection from "./FooterSection";
 
 // import NavBar from "../../widgets/NavBar";
 
@@ -21,7 +20,6 @@ const AboutPage = () => {
       <PartnerCards />
       <FounderMsg />
       <Infrastructure />
-      <FooterSection />
     </main>
   );
 };
